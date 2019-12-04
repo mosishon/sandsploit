@@ -43,7 +43,7 @@ exit        Exit From SSF
 0:27:25 SSF@charon-pc[Sandsploit] → 
 
 </pre>
-#Screenshot
+##Screenshot
 ![](screenshot.png)
 Installing
 --
