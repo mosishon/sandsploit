@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Sandsploit
+Comment=Sandsploit Framework
+Exec=/opt/sandsploit/Sandsploit.py
+Icon=/opt/sandsploit/icon.png
+Type=Application
+Categories=Network;RemoteAccess;
+StartupNotify=true
+Terminal=true
