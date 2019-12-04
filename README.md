@@ -1,14 +1,28 @@
 The Sandsploit Framework is released under a Apache 2.0 license.
-This is a tool to doing penetration testing easier
+This is a Good Tools For Web Pentesters
 
 you can use this Framework in all *nix os such as GNU & BSD
 
-![Git Logo](http://bayanbox.ir/view/2179952147277509482/Screenshot-20190827-130812.png)
+%%%%%%%%%%%%%/          @@@          (%%%%%%%%%%%%%|==========================|
+%%%%%%%%%%%(          @@@@@@,          (%%%%%%%%%%%|                          |
+%%%%%%%%%%.         @@@@@@              .%%%%%%%%%%| SandSploit Framework     |
+%%%%%%%%%         @@@@@@,     @@@         %%%%%%%%%|        version 2.0       |
+%%%%%%%%.        @@@@@@     @@@@@@@       .%%%%%%%%|                          |
+%%%%%%%#           @@@@@@,@@@@@@@@@@@      #%%%%%%%|                          |
+%%%%%%%*    @@@      @@@@@@@@@   @@@@@@    *%%%%%%%|Developres:  Aμιρ (AMJ)   |
+%%%%%%%,   @@@@@@.    @@@@@@@      @@@@@   ,%%%%%%%|Invisible rabbit (mahdis) |
+%%%%%%%/     @@@@@@ @@@@@@@@@@@      @     (%%%%%%%|Roham oghani              |
+%%%%%%%%       @@@@@@@@@   @@@@@@          %%%%%%%%|                          |
+%%%%%%%%(        @@@@@      @@@@@@        #%%%%%%%%|                          |
+%%%%%%%%%#         @      @@@@@@         #%%%%%%%%%|                          |
+%%%%%%%%%%%             @@@@@@          %%%%%%%%%%%|     No System Safe       |
+%%%%%%%%%%%%/          @@@@@          /%%%%%%%%%%%%|                          |
+%%%%%%%%%%%%%%/          @          (%%%%%%%%%%%%%%|==========================|
 
 Installing
 --
 
-For Install The Sandsploit Framework you must use run installer.py with Python interpreter and Enter your Based os Such as Arch
+For Install The Sandsploit Framework you must use run installer.py with Python interpreter
 
 Using Sandsploit
 --
