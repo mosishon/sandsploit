@@ -55,6 +55,10 @@ if "sandsploit" not in "/usr/bin":
                 os.system("pkg install tor python3 python3 python2-pip python-pip torsocks")
                 setup()
                 break
+            else:
+                print ("The desired operating system was not found...\nWe will add it in the future.So Please install 'tor & torsocks' & 'python3&2 &pip'" 
+                setup()
+                break
         except:
             print("Please Check Internet and option Number...")
 else:
