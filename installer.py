@@ -37,22 +37,22 @@ if "sandsploit" not in "/usr/bin":
         uname = os.system("uname -a")
         #option = input ("enter your distro base :")
         try:
-            if "arch" or "Manjaro" in uname:
+            if "arch" or "MANJARO" in uname:
                 slowprint("[!] Install the required items ")
                 time.sleep(1)
-                os.system("pacman -S python2 python2-pip python-pip torsocks")
+                os.system("pacman -S tor python3 python2 python2-pip python-pip torsocks")
                 setup()
                 break
-            elif "Debian" or "ubuntu" in uname:
+            elif "Debian" or "Ubuntu" in uname:
                 slowprint("[!] Install the required items ")
                 time.sleep(1)
-                os.system("apt install tor python2 python2-pip python-pip torsocks")
+                os.system("apt install tor python3 python2 python2-pip python-pip torsocks")
                 setup()
                 break
             elif "FreeBSD" in uname:
                 slowprint("[!] Install the required items ")
                 time.sleep(1)
-                os.system("pkg install tor python2 python2-pip python-pip torsocks")
+                os.system("pkg install tor python3 python3 python2-pip python-pip torsocks")
                 setup()
                 break
         except:
