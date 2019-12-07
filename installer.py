@@ -13,8 +13,10 @@ def slowprint(s):
         sys.stdout.flush()
         time.sleep(5. / 100)
 def setup():
+    """
     with zipfile.ZipFile("files.zip", 'r') as zip_ref:
         zip_ref.extractall(path)
+    """
     copy_tree("../sandsploit",path)
     os.symlink("/opt/sandsploit/Sandsploit.py","/usr/bin/sandsploit")
     copy_tree("../sandsploit",path)
@@ -37,26 +39,22 @@ if "sandsploit" not in "/usr/bin":
         uname = os.system("uname -a")
         #option = input ("enter your distro base :")
         try:
-            if "arch" or "MANJARO" in uname:
+            if "arch" or "Manjaro" in uname:
                 slowprint("[!] Install the required items ")
                 time.sleep(1)
-                os.system("pacman -S tor python3 python2 python2-pip python-pip torsocks")
+                os.system("pacman -S python2 python2-pip python-pip torsocks")
                 setup()
                 break
-            elif "Debian" or "Ubuntu" in uname:
+            elif "Debian" or "ubuntu" in uname:
                 slowprint("[!] Install the required items ")
                 time.sleep(1)
-                os.system("apt install tor python3 python2 python2-pip python-pip torsocks")
+                os.system("apt install tor python2 python2-pip python-pip torsocks")
                 setup()
                 break
             elif "FreeBSD" in uname:
                 slowprint("[!] Install the required items ")
                 time.sleep(1)
-                os.system("pkg install tor python3 python3 python2-pip python-pip torsocks")
-                setup()
-                break
-            else:
-                print ("The desired operating system was not found...\nWe will add it in the future.So Please install 'tor & torsocks' & 'python3&2 &pip'" 
+                os.system("pkg install tor python2 python2-pip python-pip torsocks")
                 setup()
                 break
         except:
