@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-#CopyRight Apache-2.0 - Immortal Team 
-#Author : D3tect0r (AMJ)
+#CopyRight Apache-2.0 
+#Author : @Aμιρ-0x0 (AMJ)
 import sys ,os , time , readline
 from lib.Banner import banner 
 from lib.Console import Commands
