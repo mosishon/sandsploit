@@ -1,7 +1,6 @@
 import os , requests
 from shutil import copyfile
 
-
 def upgrade():
         if  os.geteuid() == 0:
                 try:
@@ -15,9 +14,12 @@ def upgrade():
                                 src = "sandsploit/*"
                                 dst = "/opt/sandsploit/"
                                 copyfile(src, dst)
+                                """
                                 path = "/opt/sandsploit"
                                 with zipfile.ZipFile("/opt/sandsploit/files.zip", 'r') as zip_ref:
                                         zip_ref.extractall(path)
+                                """
+                                
                                 print ("Successful. :)")
                         else:
                                 print ("Cancelled.... :( ")
