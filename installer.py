@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #CopyRight Apache-2.0
-#Author : D3tect0r (AMJ) & Roham Oghani
+#Author : @Aμιρ-0x0 (AMJ) & Roham Oghani
 import os 
 import time 
 import sys  
