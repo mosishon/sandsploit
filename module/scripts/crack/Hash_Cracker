@@ -1,0 +1,89 @@
+#!/usr/bin/python3
+import hashlib
+sys.path.append("/opt/sandsploit/core/")
+import Complator
+Hash = None
+type_hash =None
+passlist = None
+name = "Hash Cracker"
+author = "@Aμιρ-0x0 (AMJ)"
+info = "Tool for cracking hash codes."
+def help():
+    print ("author              to show author name")
+    print ("help                to show this massage")
+    print ("info                To show description of the tool ")
+    print ("set                 to set options such as : [set host http://google.com/]")
+    print ("show options        to show options of Tools")
+    print ("exit                to quit from Tool")
+def options():
+	
+    print ("options               value")
+    print ("==========            ============")
+    print ("Hash                  ",Hash)
+    print ("passlist              ",passlist)
+    print ("type_hash             ",type_hash)
+    print (" ")
+    print ("[*]-md5")
+    print ("[*]-sha1")
+    print ("[*]-sh224")
+    print ("[*]-sha256")
+    print ("[*]-sha384")
+    print ("[*]-sha512")
+
+def run():
+	try:
+
+		wordlist = open(passlist,"r").readlines()
+
+		for password in wordlist:
+			password = password.strip()
+
+			if type_hash == "md5":
+				hash_a = hashlib.md5(password).hexdigest()
+			elif type_hash == "sha1":
+				hash_a = hashlib.sha1(password).hexdigest()
+
+			elif type_hash == "sha224":
+				hash_a = hashlib.sha224(password).hexdigest()
+			elif type_hash == "sha256":
+				hash_a = hashlib.sha256(password).hexdigest()
+			elif type_hash == "sha384":
+				hash_a = hashlib.sha384(password).hexdigest()
+			elif type_hash == "sha512":
+				hash_a = hashlib.sha512(password).hexdigest()
+			if hashing == hash_a:
+				print ("[+] hash is cracked > ",password)
+				break
+			else:
+				print ("[-] try test ",password)
+	except:
+		print ("Error! Please check Options ")
+
+while True:
+    try:
+        
+        option = input ("\033[96m┌─[SSF][\033[91m"+name+"\033[96m]\n└─▪ ")
+        op2 = option.split(" ")
+        if option == "help":
+            help()
+        elif option == "author":
+            print (author)
+        elif option == "info":
+            print (info)
+
+        elif option == "show_options":
+            options()
+        elif op2[0] == "set":
+            if op2[1] == "host":
+                host = op2[2]
+                print ("host => ",host)
+            else:
+                print ("%s Not Found",op2[2])
+        elif option == "run":
+            run()
+        elif option == "exit":
+            break
+        else:
+            print ("Wrong Command ! ")
+    except:
+        print ('Unkonwn Error !')
