@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-#CopyRight Apache-2.0
-#Author : @Aμιρ-0x0 (AMJ) & Roham Oghani
+#Author @Aμιρ-0x0(AMJ)
 import os 
 import time 
 import sys  
-import zipfile 
 import shutil
 from distutils.dir_util import copy_tree
 def slowprint(s):
@@ -13,10 +11,6 @@ def slowprint(s):
         sys.stdout.flush()
         time.sleep(5. / 100)
 def setup():
-    """
-    with zipfile.ZipFile("files.zip", 'r') as zip_ref:
-        zip_ref.extractall(path)
-    """
     copy_tree("../sandsploit",path)
     os.symlink("/opt/sandsploit/Sandsploit.py","/usr/bin/sandsploit")
     copy_tree("../sandsploit",path)
@@ -28,7 +22,7 @@ def setup():
             os.chmod(os.path.join(root, d),0o755)
         for f in files:
             os.chmod(os.path.join(root, f), 0o755)
-    os.system("pip install bs4 builtwith")
+    os.system("pip install bs4 builtwith && pip install tqdm")
     print ("Installation completed successfully.....")
 if not os.geteuid() is 0:
     sys.exit("\n Run only with root access \n")
@@ -37,7 +31,6 @@ path = "/opt/sandsploit"
 if "sandsploit" not in "/usr/bin":
     while True:
         uname = os.system("uname -a")
-        #option = input ("enter your distro base :")
         try:
             if "arch" or "Manjaro" in uname:
                 slowprint("[!] Install the required items ")
@@ -57,7 +50,9 @@ if "sandsploit" not in "/usr/bin":
                 os.system("pkg install tor python2 python2-pip python-pip torsocks")
                 setup()
                 break
+			else :
+				print("sandsploit doesn't support your distro or package manager\n please try again later.")
         except:
-            print("Please Check Internet and option Number...")
+            print("Please Check Internet and option Number in source...")
 else:
     print ("Sandsploit has Exist In /usr/bin/ I Can't install Sandsploit....")
