@@ -53,10 +53,14 @@ For Install The Sandsploit Framework you must run installer.py with Python inter
 
 Using Sandsploit
 --
-To run the Sandsploit after installing it, run the sandsploit command on the terminal
-You can use one of the two sections of exploits or scripts with run command
-
-such as run scripts
-
+Working with this tool is easy
+You can create a reverse shell with the command "RSMaker"
+You can also use the tools and exploits we provide
+<pre>
+use Tools/scanner/
+</pre>
+<pre>
+run AdminPageFinder.py
+</pre>
 You will also be shown a list of commands by entering the "help" command
 
