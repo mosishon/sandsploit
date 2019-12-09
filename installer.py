@@ -50,10 +50,10 @@ if "sandsploit" not in "/usr/bin":
                 os.system("pkg install tor python2 python2-pip python-pip torsocks")
                 setup()
                 break
-	    else:
-		qs = input ("sandsploit doesn't Support Your Distro\nContinue installation? [Y/N] > ")
-		if qs == "y" or qs == "Y" or qs == "yes" or qs == "Yes" :
-		    setup()
+            else:
+                qs = input ("sandsploit doesn't Support Your Distro\nContinue installation? [Y/N] > ")
+                if qs == "y" or qs == "Y" or qs == "yes" or qs == "Yes" :
+                    setup()
         except:
             print("Please Check Internet and option Number in source...")
 else:
