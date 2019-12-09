@@ -38,7 +38,7 @@ if "sandsploit" not in "/usr/bin":
                 os.system("pacman -S python2 python2-pip python-pip torsocks")
                 setup()
                 break
-            elif "Debian" or "ubuntu" in uname:
+            elif " Debian" or "ubuntu" in uname:
                 slowprint("[!] Install the required items ")
                 time.sleep(1)
                 os.system("apt install tor python2 python2-pip python-pip torsocks")
