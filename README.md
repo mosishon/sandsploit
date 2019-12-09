@@ -49,7 +49,7 @@ Screenshot
 Installing
 --
 
-For Install The Sandsploit Framework you must use run installer.py with Python interpreter
+For Install The Sandsploit Framework you must run installer.py with Python interpreter
 
 Using Sandsploit
 --
