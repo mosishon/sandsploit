@@ -1,6 +1,7 @@
 #CopyRight Apache-2.0
 #Powered By Python 3.X
-#Author : @Aμιρ (AMJ)
+#Author : @Aμιρ-0x0 (AMJ)
+
 import requests, sys , urllib.request , shutil , hashlib , os , zipfile , time , tqdm , urllib
 def update():
     if  os.geteuid() == 0:
