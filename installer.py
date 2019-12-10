@@ -22,7 +22,7 @@ def setup():
             os.chmod(os.path.join(root, d),0o755)
         for f in files:
             os.chmod(os.path.join(root, f), 0o755)
-    os.system("pip install bs4 builtwith && pip install tqdm")
+    os.system("pip install -r requirements.txt")
     print ("Installation completed successfully.....")
 if not os.geteuid() is 0:
     sys.exit("\n Run only with root access \n")
