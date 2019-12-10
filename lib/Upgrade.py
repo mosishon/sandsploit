@@ -1,6 +1,6 @@
 #CopyRight Apache-2.0
 #Powered By Python 3.X
-#Author : @Aμιρ (AMJ)
+#Author : @Aμιρ-0x0 (AMJ)
 
 import os , requests
 from shutil import copyfile
