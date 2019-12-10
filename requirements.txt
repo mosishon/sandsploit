@@ -1,0 +1,6 @@
+requests
+tqdm
+bs4
+builtwith
+hashlib
+colorama
