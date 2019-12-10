@@ -1,6 +1,6 @@
-#CopyRight Apache-2.0 - Immortal Team 
+#CopyRight Apache-2.0
 #Powered By Python 3.X
-#Author : @Aμιρ0x0 (AMJ)
+#Author : @Aμιρ-0x0 (AMJ)
 
 def banner():
     import random
