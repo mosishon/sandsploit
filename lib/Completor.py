@@ -1,3 +1,6 @@
+#CopyRight Apache-2.0
+#Powered By Python 3.X
+#Author : @Aμιρ (AMJ)
 
 import os
 import sys 
