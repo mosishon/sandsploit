@@ -1,6 +1,6 @@
-#CopyRight Apache-2.0 - Immortal Team 
+#CopyRight Apache-2.0
 #Powered By Python 3.X
-#Author : D3tect0r (AMJ)
+#Author : @Aμιρ (AMJ)
 import requests, sys , urllib.request , shutil , hashlib , os , zipfile , time , tqdm , urllib
 def update():
     if  os.geteuid() == 0:
