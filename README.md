@@ -57,10 +57,8 @@ Working with this tool is easy
 You can create a reverse shell with the command "RSMaker"
 You can also use the tools and exploits we provide
 <pre>
-use Tools/scanner/
-</pre>
-<pre>
-run AdminPageFinder.py
+0:20:12 SSF@charon-pc[Sandsploit] → use Tools/InformationGathering/
+0:20:30 SSF@charon-pc[Sandsploit] → run AdminPageFinder.py
 </pre>
 You will also be shown a list of commands by entering the "help" command
 
