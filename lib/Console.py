@@ -82,7 +82,7 @@ exit        Exit From SSF
             elif option == "update":
                 update()
             elif option == "upgrade":
-                upgrade
+                upgrade()
             elif option == "banner":
                 banner()
             elif option == "RSMaker":
