@@ -53,7 +53,9 @@ For Install The Sandsploit Framework you must run installer.py with Python inter
 
 Using Sandsploit
 --
-Working with this tool is easy Only Enter `sandsploit` in terminal
+Working with this tool is easy....
+
+To get started,Run `sandsploit` in terminal
 
 
 You can create a reverse shell with the command "RSMaker"
