@@ -10,7 +10,7 @@ def banner():
     ▒██    ▒                     Sandsploit Framework By Immortal Team 
     ░ ▓██▄   
     ▒   ██▒       Developers:  Aμιρ (AMJ)   &    Invisible rabbit(Mahdis)
-    ▒██████▒▒                                                   and Collect0r (Roham oghani)
+    ▒██████▒▒      
     ▒ ▒▓▒ ▒ ░                         Version : 2.2
     ░ ░▒  ░ ░                               No System Safe 
     ░  ░  ░  --------------------------------------------------------------------------------------
@@ -27,7 +27,7 @@ def banner():
                     Sandsploit Framework By Immortal Team
                         Version 2.2
         Developers:  Aμιρ (AMJ)  &  Invisible rabbit(Mahdis) 
-                                                 and Roham oghani
+                                                 
                                 No System Safe
     --------------------------------------------------------------------------------------
     ''')
@@ -40,8 +40,8 @@ def banner():
 %%%%%%%%.        @@@@@@     @@@@@@@       .%%%%%%%%|                          |
 %%%%%%%#           @@@@@@,@@@@@@@@@@@      #%%%%%%%|                          |
 %%%%%%%*    @@@      @@@@@@@@@   @@@@@@    *%%%%%%%|Developres:  Aμιρ (AMJ)   |
-%%%%%%%,   @@@@@@.    @@@@@@@      @@@@@   ,%%%%%%%|Invisible rabbit (mahdis) |
-%%%%%%%/     @@@@@@ @@@@@@@@@@@      @     (%%%%%%%|Roham oghani              |
+%%%%%%%,   @@@@@@.    @@@@@@@      @@@@@   ,%%%%%%%|Invisible rabbit (Mahdis) |
+%%%%%%%/     @@@@@@ @@@@@@@@@@@      @     (%%%%%%%|                          |
 %%%%%%%%       @@@@@@@@@   @@@@@@          %%%%%%%%|                          |
 %%%%%%%%(        @@@@@      @@@@@@        #%%%%%%%%|                          |
 %%%%%%%%%#         @      @@@@@@         #%%%%%%%%%|                          |
