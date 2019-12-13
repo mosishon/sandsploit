@@ -9,7 +9,7 @@ from lib.update import update
 from lib.version import version
 from lib.Completor import *
 from lib.Upgrade import upgrade
-from core.listener import listener
+from core.listener import *
 from core.RSMaker import RSMaker
 from datetime import datetime
 ##################################################
@@ -19,15 +19,14 @@ def Commands():
     try:
     
         while True:
-            now = datetime.now() 
-            time = Fore.CYAN+"%s:%s:%s"%(now.hour,now.minute,now.second)
-    
             getcwd = os.getcwd()
             getdir = getcwd.split("/")
-            getcwd = Fore.RED + getdir[-1]
-            plat = Fore.BLUE + platform.node()
+            pwd =  getdir[-1]
+            plat = platform.node()
+            point = "→"
             
-            option = input(time+Fore.RED+" SSF@"+plat+"["+getcwd+"]"+Fore.GREEN+" → "+Fore.RESET)
+            option = input (Fore.RESET+"\n[SSF@%s](%s) %s "%(plat,pwd,point))
+            
             option2 = option.split(" ")
             if option2[0] == "cd":
                 
@@ -88,7 +87,9 @@ exit        Exit From SSF
             elif option == "RSMaker":
                 RSMaker()
             elif option == "listener":
-                listener()
+                #listener()
+                main()
+                Commands()
             elif option == "exit":
                 break
             else:
@@ -101,4 +102,3 @@ exit        Exit From SSF
     except KeyboardInterrupt:
         print ("\nInterrupt: use the 'exit' command to quit")
         Commands()
-    
