@@ -65,7 +65,6 @@ Command     Description
 ========    ============
 banner      Change Banner
 bash        Run Bash Shell
-list        Show Files List In Exploits & Scripts Parts
 listener    Sniffing Port
 python      Interactive Shell(Debuging Purposes)
 RSMaker     Make Reverse Shell For Desktop Operating Systems
