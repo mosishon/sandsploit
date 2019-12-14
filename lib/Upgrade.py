@@ -34,19 +34,16 @@ def upgrade():
                                         zip_ref.extractall(path)
                                 """
 			        
-			        os.chmod("/opt/sandsploit/Sandsploit.py",0o755)
-			        shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
+                                os.chmod("/opt/sandsploit/Sandsploit.py",0o755)
+			        
+                                shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
+                                cp = "/opt/sandsploit/module"
                                 for root, dirs, files in os.walk(cp):
-                                for d in dirs:
-                                    os.chmod(os.path.join(root, d),0o755)
-                                for f in files:
-                                    os.chmod(os.path.join(root, f), 0o755)
-			        cp = "/opt/sandsploit/module"
-			        for root, dirs, files in os.walk(cp):
-				    for d in dirs:
-				        os.chmod(os.path.join(root, d),0o755)
-				    for f in files:
-				        os.chmod(os.path.join(root, f), 0o755)
+                                    for d in dirs:
+                                        os.chmod(os.path.join(root, d),0o755)
+                                    for f in files:
+                                        os.chmod(os.path.join(root, f), 0o755)
+		
                                 print ("Successful. :)")
                         else:
                                 print ("Cancelled.... :( ")
