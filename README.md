@@ -29,7 +29,6 @@ Command     Description
 ========    ============
 banner      Change Banner
 bash        Run Bash Shell
-list        Show Files List In Exploits & Scripts Parts
 listener    Sniffing Port
 python      Interactive Shell(Debuging Purposes)
 RSMaker     Make Reverse Shell For Desktop Operating Systems
@@ -40,7 +39,7 @@ upgrade     Full Upgrade Freamworks
 update      Update Exploits & Scripts Parts
 exit        Exit From SSF
                 
-0:27:25 SSF@charon-pc[Sandsploit] → 
+[SSF@charon-pc](Sandsploit) → 
 
 </pre>
 Screenshot
