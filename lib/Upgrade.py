@@ -14,7 +14,7 @@ def upgrade():
                                         requests.get("https://google.com/")
                                 except:
                                         print ("Please Check Your Internet Connections")
-                                os.system("git clone https://github.com/auip_0x0/sandsploit.git")
+                                os.system("git clone https://github.com/auip-0x0/sandsploit.git")
                                 src = "sandsploit/*"
                                 dst = "/opt/sandsploit/"
                                 copyfile(src, dst)
