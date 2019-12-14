@@ -22,7 +22,7 @@ you can use this Framework in all *nix os such as GNU & BSD
 %%%%%%%%%%%%/          @@@@@          /%%%%%%%%%%%%|                          |
 %%%%%%%%%%%%%%/          @          (%%%%%%%%%%%%%%|==========================|
     
-0:27:22 SSF@charon-pc[Sandsploit] → help
+[SSF@charon-pc](Sandsploit) →  help
 
 
 Command     Description
@@ -60,8 +60,8 @@ To get started,Run `sandsploit` in terminal
 You can create a reverse shell with the command "RSMaker"
 You can also use the tools and exploits we provide
 <pre>
-0:20:12 SSF@charon-pc[Sandsploit] → use Tools/InformationGathering/
-0:20:30 SSF@charon-pc[Sandsploit] → run AdminPageFinder.py
+[SSF@charon-pc](Sandsploit) → use Tools/InformationGathering/
+[SSF@charon-pc](Sandsploit) → run AdminPageFinder.py
 </pre>
 You will also be shown a list of commands by entering the "help" command
 
