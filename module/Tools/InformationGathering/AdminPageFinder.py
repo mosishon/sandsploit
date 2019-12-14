@@ -152,7 +152,7 @@ def run():
             if con == "" or con == "yes" or con == "Yes" or con == "y" or con == "Y":
                 continue
             else:
-                sys.exit()
+                break
         except urllib.error.URLError as msg :
             print ("\033[91m **** SORRY NOT FOUND ::: "+curl)
 
