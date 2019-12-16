@@ -12,12 +12,11 @@ def slowprint(s):
         sys.stdout.write(c)
         sys.stdout.flush()
         time.sleep(3. / 100)
-#os.system("notify-send "+"Sandsploit "+"Started")
+
+sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=32, cols=100))
 slowprint("\033[91m[!] Starting The Sandsploit Framework console... ")
 time.sleep(4)
 os.system("clear")
 
-#home = expanduser("~") 
-#os.chdir(home)
 banner()
 Commands()
