@@ -4,7 +4,7 @@ This is a Good Tools For Pentesters
 you can use this Framework in all *nix os such as GNU & BSD
 ## PreView
 <pre>
-0:27:21 SSF@charon-pc[Sandsploit] → banner
+SSF@charon-pc[Sandsploit] → banner
  
 %%%%%%%%%%%%%/          @@@          (%%%%%%%%%%%%%|==========================|
 %%%%%%%%%%%(          @@@@@@,          (%%%%%%%%%%%|                          |
