@@ -13,7 +13,7 @@ def slowprint(s):
         sys.stdout.flush()
         time.sleep(3. / 100)
 
-sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=32, cols=118))
+sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=32, cols=110))
 slowprint("\033[91m[!] Starting The Sandsploit Framework console... ")
 time.sleep(4)
 os.system("clear")
