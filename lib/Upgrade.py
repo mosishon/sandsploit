@@ -49,3 +49,6 @@ def upgrade():
                                 print ("Successful. :)")
                         else:
                                 print ("Cancelled.... :( ")
+        else:
+            print ("Please Run Sandsploit with root user to Starting Update...!")
+	
