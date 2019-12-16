@@ -1,34 +1,25 @@
+#CopyRight Apache-2.0
+#Powered By Python 3.X
+#Author : @Aμιρ-0x0 (AMJ)
+
 import os
-import re
+import sys 
 import readline
-COMMANDS = ['help','author','run','exit','info','show_options','set']
-RE_SPACE = re.compile('.*\s+$', re.M)
+import glob
+import re
 
-class Completer(object):
 
-    def complete(self, text, state):
-        "Generic readline completion entry point."
-        buffer = readline.get_line_buffer()
-        line = readline.get_line_buffer().split()
-        # show all commands
-        if not line:
-            return [c + ' ' for c in COMMANDS][state]
-        # account for last argument ending in a space
-        if RE_SPACE.match(buffer):
-            line.append('')
-        # resolve command to the implementation function
-        cmd = line[0].strip()
-        if cmd in COMMANDS:
-            impl = getattr(self, 'complete_%s' % cmd)
-            args = line[1:]
-            if args:
-                return (impl(args) + [None])[state]
-            return [cmd + ' '][state]
-        results = [c  for c in COMMANDS if c.startswith(cmd)] + [None]
-        return results[state]
+def lists(path):        
+    commands = COMMANDS = ['help','author','run','exit','info','show_options','set']
+    return commands
 
-comp = Completer()
-# we want to treat '/' as part of a word, so override the delimiters
-readline.set_completer_delims(' \t\n;')
-readline.parse_and_bind("tab: complete")
-readline.set_completer(comp.complete)
+
+def completer(text, state):
+
+    options = [x for x in lists(text) if x.startswith(text)]
+    return options[state]
+
+readline.set_completer(completer)
+
+readline.parse_and_bind('tab: complete')
+readline.set_completer_delims(' \t\n`~!@#$%^&*()-=+[{]}\\|;:\'",<>?')
