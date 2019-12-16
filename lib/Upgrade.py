@@ -18,18 +18,24 @@ def copytree(src, dst, symlinks=False, ignore=None):
 def upgrade():
         if  os.geteuid() == 0:
                 
-                        option = input ("Are You Want to Full Upgrade SSF ?[Y/n]")
+                        option = input ("Are You Want to Full Upgrade SSF ?[Y/n] > ")
                         if option == "y" or option == "Y" or option == "yes" or option == "Yes":
                                 try:
                                         requests.get("https://google.com/")
                                 except:
                                         print ("Please Check Your Internet Connections")
 					
+                                exist = os.path.isdir('sandsploit') 
+                                if exist :
+                                        print ("sandsploit Directory is Exist! Please Remove This & Try Again .... ")
+                                        return None
+
+
                                 os.system("git clone https://github.com/auip-0x0/sandsploit.git")
                                 src = "sandsploit/"
                                 dst = "/opt/sandsploit/"
                                 copytree(src, dst)
-				shutil.rmtree(src)
+                                shutil.rmtree(src)
 			        
                                 os.chmod("/opt/sandsploit/Sandsploit.py",0o755)
                                 shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
@@ -43,6 +49,3 @@ def upgrade():
                                 print ("Successful. :)")
                         else:
                                 print ("Cancelled.... :( ")
-                
-        else:
-                print ("Please Run Sandsploit with root user to Starting Update...!")
