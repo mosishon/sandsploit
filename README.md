@@ -1,5 +1,5 @@
 The Sandsploit Framework is released under a Apache 2.0 license.
-This is a Good Tools For Pentesters
+This is a Good Tool For Pentesters
 
 you can use this Framework in all *nix os such as GNU & BSD
 ## PreView
