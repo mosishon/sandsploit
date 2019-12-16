@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import requests , sys
 from colorama import Fore
 sys.path.append("/opt/sandsploit/core/")
