@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import os ,re,readline
+import os ,re,readline,sys
 from socket import *
 sys.path.append("/opt/sandsploit/core/")
 import Complator
