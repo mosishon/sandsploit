@@ -24,18 +24,14 @@ def upgrade():
                                         requests.get("https://google.com/")
                                 except:
                                         print ("Please Check Your Internet Connections")
+					
                                 os.system("git clone https://github.com/auip-0x0/sandsploit.git")
                                 src = "sandsploit/"
                                 dst = "/opt/sandsploit/"
                                 copytree(src, dst)
-                                """
-                                path = "/opt/sandsploit"
-                                with zipfile.ZipFile("/opt/sandsploit/files.zip", 'r') as zip_ref:
-                                        zip_ref.extractall(path)
-                                """
+				shutil.rmtree(src)
 			        
                                 os.chmod("/opt/sandsploit/Sandsploit.py",0o755)
-			        
                                 shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
                                 cp = "/opt/sandsploit/module"
                                 for root, dirs, files in os.walk(cp):
