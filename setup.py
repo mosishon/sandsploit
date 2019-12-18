@@ -77,8 +77,8 @@ def uninstall():
 
 def print_usage():
     print ('''usage :
-    [!] - python3 setup.py install            Install
-    [!] - python3 setup.py uninstall          Uninstall''')
+    [!] - python3 setup.py install            Start installation
+    [!] - python3 setup.py uninstall          Start uninstallation''')
 if len(sys.argv) < 2:
     print_usage()
     sys.exit(1)
