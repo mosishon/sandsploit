@@ -44,7 +44,7 @@ exit        Exit From SSF
 </pre>
 Screenshot
 --
-![](screenshot.png)
+![](docs/screenshot.png)
 Installing
 --
 
