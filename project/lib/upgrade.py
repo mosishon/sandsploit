@@ -37,7 +37,7 @@ def upgrade():
                                 copytree(src, dst)
                                 shutil.rmtree(src)
 			        
-                                os.chmod("/opt/sandsploit/Sandsploit.py",0o755)
+                                os.chmod("/opt/sandsploit/__init__.py",0o755)
                                 shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
                                 cp = "/opt/sandsploit/module"
                                 for root, dirs, files in os.walk(cp):
