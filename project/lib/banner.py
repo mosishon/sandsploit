@@ -7,7 +7,7 @@ def banner():
     #from lib.version import version
     a = ('''\033[91m
     ██████  
-    ▒██    ▒                     Sandsploit Framework By Immortal Team 
+    ▒██    ▒                        Sandsploit Framework  
     ░ ▓██▄   
     ▒   ██▒       Developers:  Aμιρ (AMJ)   &    Invisible rabbit(Mahdis)
     ▒██████▒▒      
@@ -24,7 +24,7 @@ def banner():
     \033[37m    ╚════██║██╔══██║██║╚██╗██║██║  ██║╚════██║██╔═══╝ ██║     ██║   ██║██║   ██║   
     \033[91m    ███████║██║  ██║██║ ╚████║██████╔╝███████║██║     ███████╗╚██████╔╝██║   ██║   
     \033[91m    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝   ╚═╝   
-                    Sandsploit Framework By Immortal Team
+                      Sandsploit Framework
                         Version 2.4
         Developers:  Aμιρ (AMJ)  &  Invisible rabbit(Mahdis)               
                                 No System Safe
