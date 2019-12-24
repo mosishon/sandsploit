@@ -32,7 +32,7 @@ def upgrade():
 
 
                                 os.system("git clone https://github.com/auip-0x0/sandsploit.git")
-                                src = "sandsploit/"
+                                src = "sandsploit/project/"
                                 dst = "/opt/sandsploit/"
                                 copytree(src, dst)
                                 shutil.rmtree(src)
