@@ -1,5 +1,5 @@
+#!/usr/bin/python3
 import requests , readline , sys
-
 sys.path.append("/opt/sandsploit/core/")
 from complator import *
 host = None
