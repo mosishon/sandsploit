@@ -2,7 +2,7 @@
 import requests , sys
 from colorama import Fore
 sys.path.append("/opt/sandsploit/core/")
-import Complator
+import complator
 name = "Wordpress Cracker"
 author = "@Aμιρ-0x0 (AMJ)"
 info = "a Tool for Cracking WP Admin User...."

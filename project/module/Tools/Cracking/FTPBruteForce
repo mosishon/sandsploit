@@ -2,7 +2,7 @@
 import os ,re,readline,sys
 from socket import *
 sys.path.append("/opt/sandsploit/core/")
-import Complator
+import complator
 host = None
 userlist =None
 passlist = None

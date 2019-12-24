@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import os , requests , sys , readline
 sys.path.append("/opt/sandsploit/core/")
-import Complator
+import complator
 host = None
 dirfile = None
 name = "DirFinder"

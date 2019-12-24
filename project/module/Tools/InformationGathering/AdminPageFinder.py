@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import urllib.request , time , sys , os , readline , re
 sys.path.append("/opt/sandsploit/core/")
-from Complator import *
+from complator import *
 host = None
 name = "AdminPageFinder"
 author = "@Aμιρ-0x0 (AMJ)"

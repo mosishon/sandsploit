@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import requests , json , sys , readline , re
 sys.path.append("/opt/sandsploit/core/")
-import Complator
+import complator
 host = None
 name = "SDomins"
 author = "@Aμιρ-0x0 (AMJ)"
