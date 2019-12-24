@@ -71,6 +71,8 @@ def install():
             
     else:
         print ("Sandsploit has Exist In /usr/bin/ I Can't install Sandsploit....")
+
+
 def uninstall():
     dst = "/opt/sandsploit/"
     exist = os.path.isdir(dst) 
@@ -82,9 +84,7 @@ def uninstall():
         os.remove('/usr/bin/sandsploit')
         os.remove("/usr/share/applications/sandsploit.desktop")
         print ("Uninstalled...")
-        return None
-
-        
+        return None        
     else:
         print ("Sandsploit is not installed.....")
 
