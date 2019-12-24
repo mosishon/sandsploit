@@ -38,7 +38,7 @@ def install():
         dis = distro.linux_distribution(full_distribution_name=False)
         dis = dis[0]
         archbase = ['arch','Manjaro','arco']
-        debianbase = ['debian','ubuntu','mint','parrot','kali']
+        debianbase = ['debian','ubuntu','mint','parrot','kali','deepin']
         void = ['void']
         bsd = ['freebsd','netbsd','openbsd']
         if dis in archbase:
