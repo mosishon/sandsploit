@@ -32,7 +32,8 @@ def install():
 
 
     path = "/opt/sandsploit"
-    if "sandsploit" not in "/usr/bin":
+    exist =  os.path.isdir(path) 
+    if not exist:
             
         dis = distro.linux_distribution(full_distribution_name=False)
         dis = dis[0]
@@ -70,7 +71,8 @@ def install():
                 setup()
             
     else:
-        print ("Sandsploit has Exist In /usr/bin/ I Can't install Sandsploit....")
+        uninstall()
+        install()
 
 
 def uninstall():
