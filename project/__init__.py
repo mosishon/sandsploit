@@ -19,7 +19,7 @@ slowprint("\033[91m[!] Starting The Sandsploit Framework console... ")
 time.sleep(4)
 os.system("clear")
 uname = subprocess.check_output("uname -o", shell=True)
-if 'Android' in uname:
+if 'Android' in str(uname):
     banner()
     termuxconsole()
 else:
