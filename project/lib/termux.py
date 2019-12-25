@@ -16,7 +16,7 @@ from datetime import datetime
 ##################################################
 
 
-def termuxconsole():
+def Commands():
     try:
     
         while True:
@@ -52,7 +52,7 @@ def termuxconsole():
             
             elif option2[0] == 'use':
                 try:
-                    os.chdir("/opt/sandsploit/module/"+option2[1])
+                    os.chdir("/data/data/com.termux/files/usr/opt/sandsploit/module/"+option2[1])
                 except:
                     print ("Part Not Found")
 

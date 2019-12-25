@@ -2,8 +2,10 @@
 #Author @Aμιρ-0x0(AMJ)
 import os  , sys , distro , time , shutil
 from distutils.dir_util import copy_tree
-if os.geteuid() != 0:
-    sys.exit("\n Run only with root access \n")
+uname = os.system("uname -a")
+if 'Android' not in uname: 
+    if os.geteuid() != 0:
+        sys.exit("\n Run only with root access \n")
 
 def get_dis():
 
@@ -27,52 +29,66 @@ def install():
                 os.chmod(os.path.join(root, d),0o755)
             for f in files:
                 os.chmod(os.path.join(root, f), 0o755)
-        os.system("pip install -r docs/requirements.txt")
+        os.system("python3 -m pip install -r docs/requirements.txt")
         print ("Installation completed successfully.....")
-
-
-    path = "/opt/sandsploit"
-    exist =  os.path.isdir(path) 
-    if not exist:
-            
-        dis = distro.linux_distribution(full_distribution_name=False)
-        dis = dis[0]
-        archbase = ['arch','Manjaro','arco']
-        debianbase = ['debian','ubuntu','mint','parrot','kali','deepin']
-        void = ['void']
-        bsd = ['freebsd','netbsd','openbsd']
-        if dis in archbase:
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("pacman -S netcat")
-            setup()
-            
-        elif dis in debianbase:
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("apt install netcat")
-            setup()
-            
-        elif dis in void :
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("xbps-install -S netcat")
-            setup()
-            
-        elif dis in bsd:
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("pkg install netcat")
-            setup()
-            
-        else:
-            qs = input ("sandsploit doesn't Support Your dis\nContinue installation? [Y/N] > ")
-            if qs == "y" or qs == "Y" or qs == "yes" or qs == "Yes" :
+    def termux():
+        copy_tree("project/",path)
+        os.symlink("/data/data/com.termux/files/usr/opt/sandsploit/__init__.py","/data/data/com.termux/files/usr/bin/sandsploit")
+        os.chmod("/opt/sandsploit/__init__.py",0o755)
+        #shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
+        cp = "/data/data/com.termux/files/usr/opt/sandsploit/module"
+        for root, dirs, files in os.walk(cp):
+            for d in dirs:
+                os.chmod(os.path.join(root, d),0o755)
+            for f in files:
+                os.chmod(os.path.join(root, f), 0o755)
+        os.system("python3 -m pip install -r docs/requirements.txt")
+        print ("Installation completed successfully.....")
+    if 'Android' not in uname:
+        path = "/opt/sandsploit"
+        exist =  os.path.isdir(path) 
+        if not exist:
+                
+            dis = distro.linux_distribution(full_distribution_name=False)
+            dis = dis[0]
+            archbase = ['arch','Manjaro','arco']
+            debianbase = ['debian','ubuntu','mint','parrot','kali','deepin']
+            void = ['void']
+            bsd = ['freebsd','netbsd','openbsd']
+            if dis in archbase:
+                slowprint("[!] Install the required items ")
+                time.sleep(1)
+                os.system("pacman -S netcat")
                 setup()
-            
+                
+            elif dis in debianbase:
+                slowprint("[!] Install the required items ")
+                time.sleep(1)
+                os.system("apt install netcat")
+                setup()
+                
+            elif dis in void :
+                slowprint("[!] Install the required items ")
+                time.sleep(1)
+                os.system("xbps-install -S netcat")
+                setup()
+                
+            elif dis in bsd:
+                slowprint("[!] Install the required items ")
+                time.sleep(1)
+                os.system("pkg install netcat")
+                setup()
+                
+            else:
+                qs = input ("sandsploit doesn't Support Your dis\nContinue installation? [Y/N] > ")
+                if qs == "y" or qs == "Y" or qs == "yes" or qs == "Yes" :
+                    setup()
+        else:
+            uninstall()
+            install()
     else:
-        uninstall()
-        install()
+        termux()
+
 
 
 def uninstall():

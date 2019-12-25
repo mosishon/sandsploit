@@ -4,6 +4,7 @@
 import sys ,os , time , readline
 from core.__init__ import * 
 from lib.__init__ import *
+from lib.termux import *
 from os.path import expanduser
 if  os.geteuid() == 0:
     print ("\n\033[91m Warning! you run Framework with root user! \n")
@@ -17,6 +18,10 @@ sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=32, cols=110))
 slowprint("\033[91m[!] Starting The Sandsploit Framework console... ")
 time.sleep(4)
 os.system("clear")
-
-banner()
-Commands()
+uname = os.system("uname -a")
+if 'Android' not in uname:
+    banner()
+    Commands()
+else:
+    banner()
+    termuxconsole()
