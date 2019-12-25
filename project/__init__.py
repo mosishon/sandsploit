@@ -18,10 +18,10 @@ sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=32, cols=110))
 slowprint("\033[91m[!] Starting The Sandsploit Framework console... ")
 time.sleep(4)
 os.system("clear")
-uname = os.system("uname -a")
-if 'Android' not in uname:
-    banner()
-    Commands()
-else:
+uname = subprocess.check_output("uname -o", shell=True)
+if 'Android' in uname:
     banner()
     termuxconsole()
+else:
+    banner()
+    Commands()
