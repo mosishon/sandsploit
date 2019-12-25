@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 #CopyRight Apache-2.0 
 #Author : @Aμιρ-0x0 (AMJ)
-import sys ,os , time , readline
+import sys ,os , time , readline , subprocess
 from core.__init__ import * 
 from lib.__init__ import *
 from lib.termux import *
