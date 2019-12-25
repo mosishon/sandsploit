@@ -128,14 +128,19 @@ def main():
         print_usage()
         sys.exit(1)
     elif sys.argv[1] == "install":
+        
         if 'Android' in str(os.system(uname)):
             termux()
         else:
+            if os.geteuid() != 0:
+                sys.exit("\n Run only with root access \n")
             install()
     elif sys.argv[1] == "uninstall":
         if 'Android' in str(os.system(uname)):
             termuxUn()
         else:
+            if os.geteuid() != 0:
+                sys.exit("\n Run only with root access \n")
             uninstall()
     else:
         print_usage()
