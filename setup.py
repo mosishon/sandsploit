@@ -1,17 +1,8 @@
 #!/usr/bin/python3
 #Author @Aμιρ-0x0(AMJ)
-import os  , sys , distro , time , shutil
+import os  , sys , distro , time , shutil , subprocess
 from distutils.dir_util import copy_tree
-"""
-uname = "uname -a"
-unam = os.system(uname)
-android = 'Android'
-if android in unam: 
-    if os.geteuid() != 0:
-        sys.exit("\n Run only with root access \n")
-"""
-if os.geteuid() != 0:
-        sys.exit("\n Run only with root access \n")
+
 def install():
     def slowprint(s):
         for c in s + '\n':
@@ -99,7 +90,7 @@ def termux():
     path = '/data/data/com.termux/files/usr/opt/sandsploit'
     copy_tree("project/",path)
     os.symlink("/data/data/com.termux/files/usr/opt/sandsploit/__init__.py","/data/data/com.termux/files/usr/bin/sandsploit")
-    os.chmod("/opt/sandsploit/__init__.py",0o755)
+    os.chmod("/data/data/com.termux/files/usr/opt/sandsploit/__init__.py",0o755)
     #shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
     cp = "/data/data/com.termux/files/usr/opt/sandsploit/module"
     for root, dirs, files in os.walk(cp):
@@ -116,27 +107,27 @@ def termuxUn():
     if exist :
     
         shutil.rmtree(dirPath)
-        os.remove('/usr/bin/sandsploit')
-        os.remove("/usr/share/applications/sandsploit.desktop")
+        os.remove('/data/data/com.termux/files/usr/bin/sandsploit')
         print ("Uninstalled...")
         return None        
     else:
         print ("Sandsploit is not installed.....")
 def main():
-    uname = "uname -a"
+
+    uname =  subprocess.check_output("uname -o", shell=True)
     if len(sys.argv) < 2:
         print_usage()
         sys.exit(1)
     elif sys.argv[1] == "install":
         
-        if 'Android' in str(os.system(uname)):
+        if 'Android' in str(uname):
             termux()
         else:
             if os.geteuid() != 0:
                 sys.exit("\n Run only with root access \n")
             install()
     elif sys.argv[1] == "uninstall":
-        if 'Android' in str(os.system(uname)):
+        if 'Android' in str(uname):
             termuxUn()
         else:
             if os.geteuid() != 0:
