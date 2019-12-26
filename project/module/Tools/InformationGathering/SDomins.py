@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import requests , json , sys , readline , re
-sys.path.append("/opt/sandsploit/core/")
+sys.path.append("../../../core/")
 import complator
 host = None
 name = "SDomins"

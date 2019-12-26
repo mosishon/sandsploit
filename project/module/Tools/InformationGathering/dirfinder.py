@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import os , requests , sys , readline
-sys.path.append("/opt/sandsploit/core/")
+sys.path.append("../../../core/")
 import complator
 host = None
 dirfile = None
