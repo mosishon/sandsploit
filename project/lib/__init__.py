@@ -16,7 +16,7 @@ from datetime import datetime
 ##################################################
 
 
-def termuxconsole():
+def Commands():
     try:
     
         while True:

@@ -21,7 +21,7 @@ os.system("clear")
 uname = subprocess.check_output("uname -o", shell=True)
 if 'Android' in str(uname):
     banner()
-    termuxconsole()
+    termux_console()
 else:
     banner()
     Commands()
