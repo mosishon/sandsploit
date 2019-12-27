@@ -1,3 +1,6 @@
+<center>
+ ![](project/icon.png)
+</center>
 The Sandsploit Framework is released under a Apache 2.0 license.
 This is a Good Tool For Pentesters
 
