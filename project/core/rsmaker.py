@@ -76,7 +76,7 @@ int main(void){
 
     return 0;
 }
-}
+
 
         '''
         File = open(name,'w')
