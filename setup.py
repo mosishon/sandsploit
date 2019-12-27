@@ -31,7 +31,7 @@ def install():
         archbase = ['arch','Manjaro','arco']
         debianbase = ['debian','ubuntu','mint','parrot','kali','deepin']
         void = ['void']
-        bsd = ['freebsd','netbsd','openbsd']
+        bsd = ['freebsd']
         if dis in archbase:
             slowprint("[!] Install the required items ")
             time.sleep(1)
