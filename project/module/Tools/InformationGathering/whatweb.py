@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import builtwith , sys
-sys.path.append("/opt/sandsploit/core/")
+sys.path.append("../../../core/")
 import complator
 host = None
 name = "Shell Finder"

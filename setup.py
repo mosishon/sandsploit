@@ -1,14 +1,7 @@
 #!/usr/bin/python3
 #Author @Aμιρ-0x0(AMJ)
-import os  , sys , distro , time , shutil
+import os  , sys , distro , time , shutil , subprocess
 from distutils.dir_util import copy_tree
-if os.geteuid() != 0:
-    sys.exit("\n Run only with root access \n")
-
-def get_dis():
-
-    with open("/etc/issue") as f:
-        return f.read().lower().split()[0]
 
 def install():
     def slowprint(s):
@@ -27,10 +20,8 @@ def install():
                 os.chmod(os.path.join(root, d),0o755)
             for f in files:
                 os.chmod(os.path.join(root, f), 0o755)
-        os.system("pip install -r docs/requirements.txt")
+        os.system("python3 -m pip install -r docs/requirements.txt")
         print ("Installation completed successfully.....")
-
-
     path = "/opt/sandsploit"
     exist =  os.path.isdir(path) 
     if not exist:
@@ -69,18 +60,18 @@ def install():
             qs = input ("sandsploit doesn't Support Your dis\nContinue installation? [Y/N] > ")
             if qs == "y" or qs == "Y" or qs == "yes" or qs == "Yes" :
                 setup()
-            
     else:
         uninstall()
         install()
 
 
+
 def uninstall():
-    dst = "/opt/sandsploit/"
-    exist = os.path.isdir(dst) 
+    dirPath = "/opt/sandsploit/"
+    exist = os.path.isdir(dirPath) 
     if exist :
         
-        dirPath = '/opt/sandsploit'
+        
     
         shutil.rmtree(dirPath)
         os.remove('/usr/bin/sandsploit')
@@ -94,14 +85,54 @@ def print_usage():
     print ('''usage :
     [!] - python3 setup.py install            Start installation
     [!] - python3 setup.py uninstall          Start uninstallation''')
+def termux():
+    os.mkdir("/data/data/com.termux/files/usr/opt/sandsploit")
+    path = '/data/data/com.termux/files/usr/opt/sandsploit'
+    copy_tree("project/",path)
+    os.symlink("/data/data/com.termux/files/usr/opt/sandsploit/__init__.py","/data/data/com.termux/files/usr/bin/sandsploit")
+    os.chmod("/data/data/com.termux/files/usr/opt/sandsploit/__init__.py",0o755)
+    #shutil.copy("/opt/sandsploit/sandsploit.desktop","/usr/share/applications/sandsploit.desktop")
+    cp = "/data/data/com.termux/files/usr/opt/sandsploit/module"
+    for root, dirs, files in os.walk(cp):
+        for d in dirs:
+            os.chmod(os.path.join(root, d),0o755)
+        for f in files:
+            os.chmod(os.path.join(root, f), 0o755)
+    os.system("python3 -m pip install -r docs/requirements.txt")
+    print ("Installation completed successfully.....")
+
+def termuxUn():
+    dirPath = "/data/data/com.termux/files/usr/opt/sandsploit"
+    exist = os.path.isdir(dirPath) 
+    if exist :
+    
+        shutil.rmtree(dirPath)
+        os.remove('/data/data/com.termux/files/usr/bin/sandsploit')
+        print ("Uninstalled...")
+        return None        
+    else:
+        print ("Sandsploit is not installed.....")
 def main():
+
+    uname =  subprocess.check_output("uname -o", shell=True)
     if len(sys.argv) < 2:
         print_usage()
         sys.exit(1)
     elif sys.argv[1] == "install":
-        install()
+        
+        if 'Android' in str(uname):
+            termux()
+        else:
+            if os.geteuid() != 0:
+                sys.exit("\n Run only with root access \n")
+            install()
     elif sys.argv[1] == "uninstall":
-        uninstall()
+        if 'Android' in str(uname):
+            termuxUn()
+        else:
+            if os.geteuid() != 0:
+                sys.exit("\n Run only with root access \n")
+            uninstall()
     else:
         print_usage()
         sys.exit(1)
