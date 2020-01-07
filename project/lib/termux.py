@@ -76,10 +76,10 @@ exit        Exit From SSF
                 ''')
             elif option == "version":
                 version()
-            elif option == "update":
-                update()
-            elif option == "upgrade":
-                upgrade()
+            #elif option == "update":
+                #update()
+            #elif option == "upgrade":
+                #upgrade()
             elif option == "banner":
                 banner()
             elif option == "RSMaker":
