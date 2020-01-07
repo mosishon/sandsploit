@@ -86,7 +86,7 @@ def print_usage():
     [!] - python3 setup.py install            Start installation
     [!] - python3 setup.py uninstall          Start uninstallation''')
 def termux():
-    os.system("apt install -y netcat clang")
+    os.system("apt install netcat clang")
     lpath = "/data/data/com.termux/files/usr/opt/"
     ex = os.path.isdir(lpath)
     if ex == False:
