@@ -70,8 +70,6 @@ RSMaker     Make Reverse Shell For Desktop Operating Systems
 run         Run Exploits & Tools
 use         Interact with one of the two sections of Tools or exploits
 version     Show version of SandSploit
-upgrade     Full Upgrade Freamworks
-update      Update Exploits & Scripts Parts
 exit        Exit From SSF
                 ''')
             elif option == "version":
