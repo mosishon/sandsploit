@@ -86,7 +86,11 @@ def print_usage():
     [!] - python3 setup.py install            Start installation
     [!] - python3 setup.py uninstall          Start uninstallation''')
 def termux():
-    os.mkdir("/data/data/com.termux/files/usr/opt/")
+    lpath = "/data/data/com.termux/files/usr/opt/"
+    ex = os.path.isdir(lpath)
+    if ex == False:
+        os.mkdir("/data/data/com.termux/files/usr/opt/")
+  
     os.mkdir("/data/data/com.termux/files/usr/opt/sandsploit")
     path = '/data/data/com.termux/files/usr/opt/sandsploit'
     copy_tree("project/",path)
