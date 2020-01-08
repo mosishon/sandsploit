@@ -39,3 +39,35 @@ def run ():
 				print("target is vulnebilte! ")
 				print ("Target Payload "+pay)
 				break
+
+while True:
+    try:
+
+        option = input ("\033[96m┌─[SSF][\033[91m"+name+"\033[96m]\n└─▪ ")
+        op2 = option.split(" ")
+        if option == "help":
+            help()
+        elif option == "author":
+            print (author)
+        elif option == "info":
+            print (info)
+
+        elif option == "show_options":
+            options()
+        elif op2[0] == "set":
+            if op2[1] == "host":
+                host = op2[2]
+                print ("host => ",host)
+            elif op2[1] == "payfile":
+                payfile == op2[2]
+		print("payfile => ",payfile)
+            else:
+                print ("%s Not Found",op2[2])
+        elif option == "run":
+            run()
+        elif option == "exit":
+            break
+        else:
+            print ("Wrong Command ! ")
+    except:
+        print ('Unkonwn Error !')
