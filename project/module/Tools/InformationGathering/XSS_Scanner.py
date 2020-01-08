@@ -60,7 +60,7 @@ while True:
                 print ("host => ",host)
             elif op2[1] == "payfile":
                 payfile == op2[2]
-		print("payfile => ",payfile)
+                print("payfile => ",payfile)
             else:
                 print ("%s Not Found",op2[2])
         elif option == "run":
