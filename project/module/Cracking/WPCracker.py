@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 import requests , sys
 from colorama import Fore
-sys.path.append("/opt/sandsploit/core/")
+import subprocess
+uname =  subprocess.check_output("uname -o", shell=True)
+if 'Android' in str(uname):
+    sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
+else:
+    sys.path.append("/opt/sandsploit/lib/")
 import complator
 name = "Wordpress Cracker"
 author = "@Aμιρ-0x0 (AMJ)"
