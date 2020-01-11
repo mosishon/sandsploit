@@ -34,8 +34,12 @@ def termux_console():
             pwd =  getdir[-1]
             plat = platform.node()
             point = "→"
-            
-            option = input (Fore.RESET+"\n[SSF@%s](%s) %s "%(plat,pwd,point))
+            if path == None:
+                None
+            else:
+                pth = path.split("/")
+                toolpart = pth[-2]
+            option = input (Fore.RESET+"\n[SSF@%s](%s){%s} %s "%(plat,pwd,toolpart,point))
             
             option2 = option.split(" ")
             if option2[0] == "cd":
@@ -57,7 +61,7 @@ def termux_console():
                             run = option.split("run ")[1]
                             run2 = path+run
       
-                            exst = os.path.isdir(run2) 
+                            exst = os.path.isfile(run2) 
                             if exst:
                                 os.system(run2)
                             else :
