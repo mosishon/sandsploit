@@ -60,7 +60,7 @@ To get started,Run `sandsploit` in terminal
 
 
 You can create a reverse shell with the command "RSMaker"
-You can also use the tools and exploits we provide
+You can also use the tools we provide
 <pre>
 [SSF@charon-pc](Sandsploit){None} → use Cracking
 [SSF@AMJ](sandsploit){Cracking} → list
