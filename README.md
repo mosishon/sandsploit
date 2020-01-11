@@ -41,7 +41,7 @@ upgrade     Full Upgrade Freamworks
 update      Update Exploits & Scripts Parts
 exit        Exit From SSF
                 
-[SSF@charon-pc](Sandsploit) → 
+[SSF@AMJ](sandsploit){None} → 
 
 </pre>
 Screenshot
@@ -62,8 +62,16 @@ To get started,Run `sandsploit` in terminal
 You can create a reverse shell with the command "RSMaker"
 You can also use the tools and exploits we provide
 <pre>
-[SSF@charon-pc](Sandsploit) → use Tools/InformationGathering/
-[SSF@charon-pc](Sandsploit) → run AdminPageFinder.py
+[SSF@charon-pc](Sandsploit){None} → use Cracking
+[SSF@AMJ](sandsploit){Cracking} → list
+
+Tools
+===============
+Hash_Cracker.py
+WPCracker.py
+FTPBruteForce.py
+Gmail-Cracker.py
+
 </pre>
 You will also be shown a list of commands by entering the "help" command
 
