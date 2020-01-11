@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 import requests , json , sys , readline , re
-sys.path.append("/opt/sandsploit/lib/")
+import subprocess
+uname =  subprocess.check_output("uname -o", shell=True)
+if 'Android' in str(uname):
+    sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
+else:
+    sys.path.append("/opt/sandsploit/lib/")
 from complator import *
 host = None
 name = "SDomins"
