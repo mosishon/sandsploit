@@ -84,7 +84,7 @@ def Commands():
                 except:
                     print ("Part Not Found")
             elif option2[0] == 'list':
-                if toolpart == "None":
+                if path == None:
                     print("\nTools\n===============")
                     print ("Tools NotFound")
                 else:
