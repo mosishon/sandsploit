@@ -3,7 +3,7 @@ import os ,re,readline,sys
 from socket import *
 
 sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-sys.path.append("/opt/sandsploit/lib/")
+sys.path.append("/opt/sandsploit/core/")
 import complator
 host = None
 userlist =None

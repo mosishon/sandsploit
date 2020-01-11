@@ -2,7 +2,7 @@
 import hashlib,sys
 
 sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-sys.path.append("/opt/sandsploit/lib/")
+sys.path.append("/opt/sandsploit/core/")
 import complator
 Hash = None
 type_hash =None

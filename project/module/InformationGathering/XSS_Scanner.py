@@ -3,7 +3,7 @@ import requests , readline , sys
 import subprocess
 
 sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-sys.path.append("/opt/sandsploit/lib/")
+sys.path.append("/opt/sandsploit/core/")
 from complator import *
 host = None
 payfile = None
