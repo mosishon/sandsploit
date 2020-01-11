@@ -81,7 +81,11 @@ def termux_console():
                 except:
                     print ("Part Not Found")
             elif option2[0] == 'list':
-                list()
+                if toolpart = "None":
+                    print("\nTools\n===============")
+                    print ("Tools NotFound")
+                else:
+                    list()
 
 
             elif option == 'help':
@@ -91,6 +95,7 @@ Command     Description
 ========    ============
 banner      Change Banner
 bash        Run Bash Shell
+list        Show a List From Tools of 
 listener    Sniffing Port
 python      Interactive Shell(Debuging Purposes)
 RSMaker     Make Reverse Shell For Desktop Operating Systems
