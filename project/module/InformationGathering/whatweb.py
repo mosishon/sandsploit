@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import builtwith , sys
-sys.path.append("../../../core/")
-import complator
+sys.path.append("/opt/sandsploit/lib/")
+from complator import *
 host = None
 name = "Shell Finder"
 author = "@Aμιρ-0x0 (AMJ)"

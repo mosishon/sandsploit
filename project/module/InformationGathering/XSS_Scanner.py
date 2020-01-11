@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import requests , readline , sys
-sys.path.append("../../../core/")
+sys.path.append("/opt/sandsploit/lib/")
 from complator import *
 host = None
 payfile = None
