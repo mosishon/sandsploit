@@ -12,7 +12,7 @@ import re
 def lists(path):
     #apps = os.listdir("/usr/bin/")   
         
-    commands = ['help','use','run','exit','banner','nano','update','upgrade','version','python','bash','su','sudo','cd','ls','listener','RSMaker']
+    commands = ['help','use','run','exit','banner','nano','update','upgrade','version','python','bash','su','sudo','cd','ls','listener','RSMaker','list']
     """
     Lists folder contents
     """
