@@ -64,7 +64,7 @@ def Commands():
                             run = option.split("run ")[1]
                             run2 = path+run
                             #exec(open(run2).read())
-                            exst = os.path.isdir(run2) 
+                            exst = os.path.isfile(run2) 
                             if exst:
                                 os.system(run2)
                             else :
