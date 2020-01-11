@@ -81,7 +81,7 @@ def termux_console():
                 except:
                     print ("Part Not Found")
             elif option2[0] == 'list':
-                if toolpart = "None":
+                if toolpart == "None":
                     print("\nTools\n===============")
                     print ("Tools NotFound")
                 else:
