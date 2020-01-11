@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 import os , requests , sys , readline
-import subprocess
-uname =  subprocess.check_output("uname -o", shell=True)
-if 'Android' in str(uname):
-    sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-else:
-    sys.path.append("/opt/sandsploit/lib/")
+
+
+sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
+sys.path.append("/opt/sandsploit/lib/")
 from complator import *
 host = None
 dirfile = None
