@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import urllib.request , time , sys , os , readline , re
-sys.path.append("../../../core")
+sys.path.append("/opt/sandsploit/lib/")
 from complator import *
 host = None
 name = "AdminPageFinder"

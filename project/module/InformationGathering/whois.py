@@ -1,48 +1,40 @@
 #!/usr/bin/python3
-import requests , readline , sys
-sys.path.append("../../../core/")
+import requests , re , readline , sys
+sys.path.append("/opt/sandsploit/lib/")
 from complator import *
 host = None
-payfile = None
-
-name = "XSS Scanner"
-author = "Invisible Rabbit (Mahdis)"
-info = "Scan Xss Vulnerability in the Website"
-
+name = "whois"
+author = "@Aμιρ-0x0 (AMJ)"
+info = "a Great Tool To Whois...."
 
 def help():
     print ("author              to show author name")
     print ("help                to show this massage")
     print ("info                To show description of the tool ")
+    print ("set                 to set options such as : [set host http://google.com/]")
     print ("show_options        to show options of Tools")
-    print ("")
+    print ("exit                to quit from Tool")
+
 def options():
     print ("options               value")
     print ("==========            ============")
     print ("host                ",host)
-    print ("payfile             ",payfile)
-    print("\n\033[95mYou Must Enter IP without Protocol (Example : 127.0.0.1)")
+    print("\033[95mYou Must Enter URL \033[91mwithout \033[95mProtocol (Example : site.com or 127.0.0.1)")
+    print("\033[95mYou Must Write / at The End of URL EX: site.com/")
 
-
-
-def run ():
-	try:
-		payload_file = open(payfile,'r')
-	except:
-		print ("payload file not Found")
-		return 0
-	for payload in payload_file:
-		pay = payload.replace("\n", " ")
-		get_request=requests.get(host+pay)
-		if get_request.status_code==200:
-			if pay in get_request.text:
-				print("target is vulnebilte! ")
-				print ("Target Payload "+pay)
-				break
+def run():
+    try:
+        url = "https://api.hackertarget.com/whois/?q="
+        who = (url+host)
+        r = requests.get(who)
+        print (r.text)
+    except:
+        print("a Problem!Please Check Target Url and Internet Connection ......")
 
 while True:
     try:
-
+        
+        
         option = input ("\033[96m┌─[SSF][\033[91m"+name+"\033[96m]\n└─▪ ")
         op2 = option.split(" ")
         if option == "help":
@@ -58,9 +50,6 @@ while True:
             if op2[1] == "host":
                 host = op2[2]
                 print ("host => ",host)
-            elif op2[1] == "payfile":
-                payfile == op2[2]
-                print("payfile => ",payfile)
             else:
                 print ("%s Not Found",op2[2])
         elif option == "run":

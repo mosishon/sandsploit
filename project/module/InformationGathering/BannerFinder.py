@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import urllib.request ,sys , readline , re
-sys.path.append("../../../core/")
-import complator
+sys.path.append("/opt/sandsploit/lib/")
+from complator import *
 host = None
 name = "Banner Finder"
 author = "@Aμιρ-0x0 (AMJ)"
