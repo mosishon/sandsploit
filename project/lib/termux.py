@@ -18,7 +18,16 @@ from datetime import datetime
 
 def termux_console():
     try:
-    
+        path = None
+        toolpart =None
+        
+        def mp(path):
+            for root,dirs,files in os.walk(path): 
+                for f in files: 
+                    print (f)
+        def list():
+            print ("\nTools\n===============")
+            mp(path)
         while True:
             getcwd = os.getcwd()
             getdir = getcwd.split("/")
@@ -46,15 +55,29 @@ def termux_console():
                             print ("enter help to see how to use this command")
                         else:
                             run = option.split("run ")[1]
-                            os.system("./"+run)
+                            run2 = path+run
+      
+                            exst = os.path.isdir(run2) 
+                            if exst:
+                                os.system(run2)
+                            else :
+                                print ("Cannot find executable file")
                     except:
-                        print ("No file to execute")
+                        print ("Error !!!")
             
             elif option2[0] == 'use':
                 try:
-                    os.chdir("/data/data/com.termux/files/usr/opt/sandsploit/module/"+option2[1])
+                    check = "/data/data/com.termux/files/usr/opt/sandsploit/module/%s/"%option2[1]
+                    exist = os.path.isdir(check) 
+                    if exist:
+                        path = check
+                    else:
+                        print ("Part not Found")
+                    
                 except:
                     print ("Part Not Found")
+            elif option2[0] == 'list':
+                list()
 
 
             elif option == 'help':
