@@ -97,8 +97,8 @@ bash        Run Bash Shell
 listener    Sniffing Port
 python      Interactive Shell(Debuging Purposes)
 RSMaker     Make Reverse Shell For Desktop Operating Systems
-run         Run Exploits & Tools
-use         Interact with one of the two sections of Tools or exploits
+run         Run Tools In modules
+use         Interact With Different Parts of Penetration Testing Tools
 version     Show version of SandSploit
 upgrade     Full Upgrade Freamworks
 update      Update Exploits & Scripts Parts
