@@ -62,8 +62,8 @@ To get started,Run `sandsploit` in terminal
 You can create a reverse shell with the command "RSMaker"
 You can also use the tools we provide
 <pre>
-[SSF@charon-pc](Sandsploit){None} → use Cracking
-[SSF@AMJ](sandsploit){Cracking} → list
+[SSF@AMJ](Sandsploit){None} → use Cracking
+[SSF@AMJ](Sandsploit){Cracking} → list
 
 Tools
 ===============
