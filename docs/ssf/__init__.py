@@ -1,17 +1,6 @@
-import os
-import sys 
 import readline
 import glob
 import re
-
-def help():
-    return
-def run():
-    return
-def options():
-    return
-
-
 
 
 def lists(path):        

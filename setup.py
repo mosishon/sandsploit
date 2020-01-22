@@ -21,6 +21,10 @@ def install():
             for f in files:
                 os.chmod(os.path.join(root, f), 0o755)
         os.system("python3 -m pip install -r docs/requirements.txt")
+        major = sys.version_info.major
+        minor = sys.version_info.minor
+        py = ("/usr/lib/python%s,%s"%(major,minor))
+        copy_tree("docs/ssf",py)
         print ("Installation completed successfully.....")
     path = "/opt/sandsploit"
     exist =  os.path.isdir(path) 
