@@ -24,9 +24,9 @@ def help():
 def options():
     print ("options               value")
     print ("==========            ============")
-    print ("HOST                 ",HOST)
-    print ("USERLIST             ",USERLIST)
-    print ("PASSLIST             ",PASSLIST)
+    print ("host                 ",HOST)
+    print ("userlist             ",USERLIST)
+    print ("passlist             ",PASSLIST)
 
 def run():
     userl = open(USERLIST,"r")

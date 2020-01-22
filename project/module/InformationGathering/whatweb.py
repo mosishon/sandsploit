@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 import builtwith , sys
-
-sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-sys.path.append("/opt/sandsploit/core/")
-from complator import *
+from ssf import *
 HOST = None
 name = "What Web"
 author = "@Aμιρ-0x0 (AMJ)"

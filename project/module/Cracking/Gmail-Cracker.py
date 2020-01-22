@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 import smtplib , requests , re ,readline,sys
+from ssf import *
 
 
-sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-sys.path.append("/opt/sandsploit/core/")
-import complator
 USER = None
 WORDLIST = None
 name = "Gmail Cracker"

@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 import requests , json , sys , readline , re
-
-sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-sys.path.append("/opt/sandsploit/core/")
-from complator import *
+from ssf import *
 HOST = None
 name = "SDomins"
 author = "@Aμιρ-0x0 (AMJ)"
@@ -24,7 +21,7 @@ def options():
     print(" \033[95mYou Must Write / at The End of URL EX: www.site.com")
 def run():
     url = "https://domains.yougetsignal.com/domains.php"
-    parameter = {"remoteAddress":host}
+    parameter = {"remoteAddress":HOST}
     req = requests.post(url , data=parameter , headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"})
     a = req.json()
 

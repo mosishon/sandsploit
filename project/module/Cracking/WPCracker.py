@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 import requests , sys
 from colorama import Fore
+from ssf import *
 
-sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
-sys.path.append("/opt/sandsploit/core/")
-import complator
 name = "Wordpress Cracker"
 author = "@Aμιρ-0x0 (AMJ)"
 info = "a Tool for Cracking WP Admin User...."

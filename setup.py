@@ -2,6 +2,17 @@
 #Author @Aμιρ-0x0(AMJ)
 import os  , sys , distro , time , shutil , subprocess
 from distutils.dir_util import copy_tree
+def copytree(src, dst, symlinks=False, ignore=None):
+    if not os.path.exists(dst):
+        os.makedirs(dst)
+    for item in os.listdir(src):
+        s = os.path.join(src, item)
+        d = os.path.join(dst, item)
+        if os.path.isdir(s):
+            copytree(s, d, symlinks, ignore)
+        else:
+            if not os.path.exists(d) or os.stat(s).st_mtime - os.stat(d).st_mtime > 1:
+                shutil.copy2(s, d)
 
 def install():
     def slowprint(s):
@@ -10,6 +21,13 @@ def install():
             sys.stdout.flush()
             time.sleep(3. / 100)
     def setup():
+        major = sys.version_info.major
+        minor = sys.version_info.minor
+        py = ("/usr/lib/python%s.%s"%(major,minor))
+        os.mkdir(py+"/ssf")
+        src = "docs/ssf/"
+        dst = py+"/ssf/"
+        copytree(src,dst)
         copy_tree("project/",path)
         os.symlink("/opt/sandsploit/__init__.py","/usr/bin/sandsploit")
         os.chmod("/opt/sandsploit/__init__.py",0o755)
@@ -21,10 +39,7 @@ def install():
             for f in files:
                 os.chmod(os.path.join(root, f), 0o755)
         os.system("python3 -m pip install -r docs/requirements.txt")
-        major = sys.version_info.major
-        minor = sys.version_info.minor
-        py = ("/usr/lib/python%s,%s"%(major,minor))
-        copy_tree("docs/ssf",py)
+        
         print ("Installation completed successfully.....")
     path = "/opt/sandsploit"
     exist =  os.path.isdir(path) 
@@ -73,10 +88,15 @@ def install():
 def uninstall():
     dirPath = "/opt/sandsploit/"
     exist = os.path.isdir(dirPath) 
+    major = sys.version_info.major
+    minor = sys.version_info.minor
+    py = ("/usr/lib/python%s.%s"%(major,minor))
+    ppp = py+"/ssf/"
+    exist = os.path.isdir(dirPath)
     if exist :
         
         
-    
+        shutil.rmtree(ppp)
         shutil.rmtree(dirPath)
         os.remove('/usr/bin/sandsploit')
         os.remove("/usr/share/applications/sandsploit.desktop")
@@ -109,15 +129,28 @@ def termux():
         for f in files:
             os.chmod(os.path.join(root, f), 0o755)
     os.system("python3 -m pip install -r docs/requirements.txt")
+    major = sys.version_info.major
+    minor = sys.version_info.minor
+    py = ("/data/data/com.termux/files/usr/lib/python%s.%s"%(major,minor))
+    os.mkdir(py+"/ssf")
+    src = "docs/ssf/"
+    dst = py+"/ssf/"
+    copytree(src,dst)
     print ("Installation completed successfully.....")
 
 def termuxUn():
     dirPath = "/data/data/com.termux/files/usr/opt/sandsploit"
     exist = os.path.isdir(dirPath) 
+    major = sys.version_info.major
+    minor = sys.version_info.minor
+    py = ("/data/data/com.termux/files/usr/lib/python%s.%s"%(major,minor))
+    ppp = py+"/ssf/"
     if exist :
-    
+        
+        shutil.rmtree(ppp)
         shutil.rmtree(dirPath)
         os.remove('/data/data/com.termux/files/usr/bin/sandsploit')
+        
         print ("Uninstalled...")
         return None        
     else:
