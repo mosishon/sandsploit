@@ -4,21 +4,22 @@ import requests , json , sys , readline , re
 sys.path.append("/data/data/com.termux/files/usr/opt/sandsploit/core")
 sys.path.append("/opt/sandsploit/core/")
 from complator import *
-host = None
+HOST = None
 name = "SDomins"
 author = "@Aμιρ-0x0 (AMJ)"
 info = "a Great Tool For Find websites on a Server ....\n"
 def help():
     print ("author              to show author name")
     print ("help                to show this massage")
-    print ("info                To show description of the tool ")
+    print ("info                to show description of the tool ")
     print ("set                 to set options such as : [set host http://google.com/]")
     print ("show_options        to show options of Tools")
     print ("exit                to quit from Tool")
+    print ("run                 to Run Session")
 def options():
     print ("options               value")
     print ("==========            ============")
-    print ("host                ",host)
+    print ("host                ",HOST)
     print(" \033[95mYou Must Enter URL \033[91mwithout \033[95mProtocol (Example : www.site.com or 127.0.0.1)")
     print(" \033[95mYou Must Write / at The End of URL EX: www.site.com")
 def run():
@@ -30,11 +31,8 @@ def run():
     print (a['domainCount'],"site on server !\n")
     for i in a.get("domainArray",[]):
         print (i[0])
-
 while True:
     try:
-        
-        
         option = input ("\033[96m┌─[SSF][\033[91m"+name+"\033[96m]\n└─▪ ")
         op2 = option.split(" ")
         if option == "help":
@@ -47,11 +45,9 @@ while True:
         elif option == "show_options":
             options()
         elif op2[0] == "set":
-            if op2[1] == "host":
-                host = op2[2]
-                print ("host => ",host)
-            else:
-                print ("%s Not Found",op2[2])
+            op3 = op2[1].upper()    
+            vars()[op3] = op2[2]
+            print ("%s => %s"%(op2[1],op2[2]))
         elif option == "run":
             run()
         elif option == "exit":
