@@ -6,7 +6,7 @@ This is a Good Tool For Pentesters
 you can use this Framework in all *nix os such as GNU & BSD
 ## PreView
 <pre>
-SSF@charon-pc[Sandsploit] → banner
+[SSF@AMJ](sandsploit){None} → banner
 
  
     ██████  
@@ -19,7 +19,7 @@ SSF@charon-pc[Sandsploit] → banner
     ░  ░  ░  --------------------------------------------------------------------------------------
         ░  
     
-[SSF@charon-pc](Sandsploit) →  help
+[SSF@AMJ](sandsploit){None} →  help
 
 
 Command     Description
