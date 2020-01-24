@@ -20,7 +20,7 @@ def options():
     print ("==========            ============")
     print ("host                ",HOST)
     print("\033[95mYou Must Enter URL \033[91mwithout \033[95mProtocol (Example : site.com or 127.0.0.1)")
-    print("\033[95mYou Must Write / at The End of URL EX: site.com/")
+   
 
 def run():
     try:
