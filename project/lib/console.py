@@ -223,7 +223,7 @@ Command     Description
 ========    ============
 banner      Change Banner
 bash        Run Bash Shell
-list        Show a List From Tools of 
+list        List of tools for each section 
 listener    Sniffing Port
 python      Interactive Shell(Debuging Purposes)
 RSMaker     Make Reverse Shell For Desktop Operating Systems
