@@ -1,5 +1,5 @@
 ![Apache 2 License](https://img.shields.io/github/license/auip-0x0/sandsploit)
-![Github Followers](https://img.shields.io/github/followers/auip-0x0?style=social)
+
 
 The Sandsploit Framework is released under a Apache 2.0 license.
 This is a Good Tool For Pentesters
