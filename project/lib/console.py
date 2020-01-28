@@ -133,7 +133,7 @@ exit        Exit From SSF
                 listener()
                 console()
             elif option == "exit":
-                break
+                sys.exit()
             else:
                 os.system(option)
 
