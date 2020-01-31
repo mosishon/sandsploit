@@ -3,7 +3,8 @@
 #Author : @Aμιρ-0x0 (AMJ)
 
 #import libs
-import os , sys ,readline , re , platform ,signal
+
+import os , sys ,readline , re , platform,signal
 from colorama import Fore
 from os.path import expanduser
 from lib.banner import banner 
@@ -40,6 +41,7 @@ def console():
         while True:
             signal.signal(signal.SIGINT,controlc_signal)
             #Get PWD
+            signal.signal(signal.SIGINT,controlc_signal)
             getcwd = os.getcwd()
             getdir = getcwd.split("/")
             pwd =  getdir[-1]
