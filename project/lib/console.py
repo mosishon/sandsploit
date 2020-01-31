@@ -3,7 +3,7 @@
 #Author : @Aμιρ-0x0 (AMJ)
 
 #import libs
-import os , sys ,readline , re , platform
+import os , sys ,readline , re , platform,signal
 from colorama import Fore
 from os.path import expanduser
 from lib.banner import banner 
@@ -36,6 +36,7 @@ def console():
     
         while True:
             #Get PWD
+            signal.signal(signal.SIGINT,controlc_signal)
             getcwd = os.getcwd()
             getdir = getcwd.split("/")
             pwd =  getdir[-1]
@@ -141,9 +142,6 @@ exit        Exit From SSF
         print ("\nUnknown Error......")
         print ("Enter ""help"" to show commands....")
         console()
-    except KeyboardInterrupt:
-        print ("\nInterrupt: use the 'exit' command to quit")
-        console()
 def termux_console():
     try:
         path = None
@@ -157,6 +155,7 @@ def termux_console():
             print ("\nTools\n===============")
             mp(path)
         while True:
+            signal.signal(signal.SIGINT,controlc_signal)
             getcwd = os.getcwd()
             getdir = getcwd.split("/")
             pwd =  getdir[-1]
@@ -253,7 +252,4 @@ exit        Exit From SSF
     except EnvironmentError:
         print ("\nUnknown Error......")
         print ("Enter ""help"" to show commands....")
-        termux_console()
-    except KeyboardInterrupt:
-        print ("\nInterrupt: use the 'exit' command to quit")
         termux_console()
