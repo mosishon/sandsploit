@@ -1,16 +1,32 @@
-import socket
-import sys
+import socket ,signal
+import sys,os
 import threading
 import time
 from queue import Queue
 def listener():
+    
     NUMBER_OF_THREADS = 2
     JOB_NUMBER = [1, 2]
     queue = Queue()
     all_connections = []
     all_address = []
+    def register_signal_handler():
+        signal.signal(signal.SIGINT, quit_gracefully)
+        signal.signal(signal.SIGTERM, quit_gracefully)
+        return
 
-
+    def quit_gracefully(signal=None, frame=None):
+        print('\nQuitting gracefully')
+        for conn in all_connections:
+            try:
+                conn.shutdown(2)
+                conn.close()
+            except Exception as e:
+                print('Could not close connection %s' % str(e))
+                break
+                # continue
+        s.close()
+        sys.exit(0)
     # Create a Socket ( connect two computers)
     def create_socket():
         try:
@@ -66,6 +82,7 @@ def listener():
 
             except:
                 print("Error accepting connections")
+                break
 
 
     # 2nd thread functions - 1) See all the clients 2) Select a client 3) Send commands to the connected client
@@ -97,7 +114,11 @@ select   select Target such as > select 0
             elif cmd == '':
                 None
             elif cmd == 'exit' or cmd == 'quit':
-                break
+                queue.task_done()
+                queue.task_done()
+                print('Server shutdown')
+                #break
+                quit_gracefully()
             else:
                 print("Command not recognized")
 
@@ -143,7 +164,7 @@ select   select Target such as > select 0
             try:
                 cmd = input()
                 if cmd == 'quit' or cmd == 'exit':
-                    return 1
+                    break
                 if len(str.encode(cmd)) > 0:
                     conn.send(str.encode(cmd))
                     client_response = str(conn.recv(20480), "utf-8")
@@ -169,18 +190,17 @@ select   select Target such as > select 0
                 create_socket()
                 bind_socket()
                 accepting_connections()
+                break
             if x == 2:
                 start_turtle()
-
+                quit_gracefully(signal=None, frame=None)
             queue.task_done()
 
 
     def create_jobs():
         for x in JOB_NUMBER:
             queue.put(x)
-
         queue.join()
+        
     create_workers()
     create_jobs()
-
-
