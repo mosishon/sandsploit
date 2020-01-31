@@ -44,44 +44,10 @@ def install():
     path = "/opt/sandsploit"
     exist =  os.path.isdir(path) 
     if not exist:
-            
-        dis = distro.linux_distribution(full_distribution_name=False)
-        dis = dis[0]
-        archbase = ['arch','Manjaro','arco']
-        debianbase = ['debian','ubuntu','mint','parrot','kali','deepin']
-        void = ['void']
-        bsd = ['freebsd']
-        if dis in archbase:
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("pacman -S netcat")
-            setup()
-            
-        elif dis in debianbase:
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("apt install netcat")
-            setup()
-            
-        elif dis in void :
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("xbps-install -S netcat")
-            setup()
-            
-        elif dis in bsd:
-            slowprint("[!] Install the required items ")
-            time.sleep(1)
-            os.system("pkg install netcat")
-            setup()
-            
-        else:
-            qs = input ("sandsploit doesn't Support Your dis\nContinue installation? [Y/N] > ")
-            if qs == "y" or qs == "Y" or qs == "yes" or qs == "Yes" :
-                setup()
+        setup()
     else:
         uninstall()
-        install()
+        setup()
 
 
 
