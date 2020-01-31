@@ -3,6 +3,7 @@
 #Author : @Aμιρ-0x0 (AMJ)
 
 #import libs
+
 import os , sys ,readline , re , platform,signal
 from colorama import Fore
 from os.path import expanduser
@@ -16,6 +17,9 @@ from core.rsmaker import RSMaker
 from datetime import datetime
 
 ##################################################
+
+def controlc_signal(signal,frame):
+    print ("\nInterrupt: use the 'exit' command to quit")
 
 
 
@@ -35,6 +39,7 @@ def console():
     try:
     
         while True:
+            signal.signal(signal.SIGINT,controlc_signal)
             #Get PWD
             signal.signal(signal.SIGINT,controlc_signal)
             getcwd = os.getcwd()
@@ -93,7 +98,7 @@ def console():
                     
                 except:
                     print ("Part Not Found")
-            elif option2[0] == 'list':
+            elif option == 'list':
                 if path == None:
                     print("\nTools\n===============")
                     print ("Tools NotFound")
@@ -134,7 +139,7 @@ exit        Exit From SSF
                 listener()
                 console()
             elif option == "exit":
-                break
+                sys.exit()
             else:
                 os.system(option)
 
@@ -142,6 +147,7 @@ exit        Exit From SSF
         print ("\nUnknown Error......")
         print ("Enter ""help"" to show commands....")
         console()
+
 def termux_console():
     try:
         path = None
@@ -207,7 +213,7 @@ def termux_console():
                     
                 except:
                     print ("Part Not Found")
-            elif option2[0] == 'list':
+            elif option2 == 'list':
                 if path == None:
                     print("\nTools\n===============")
                     print ("Tools NotFound")
@@ -253,3 +259,4 @@ exit        Exit From SSF
         print ("\nUnknown Error......")
         print ("Enter ""help"" to show commands....")
         termux_console()
+
