@@ -93,7 +93,7 @@ def console():
                     
                 except:
                     print ("Part Not Found")
-            elif option2[0] == 'list':
+            elif option == 'list':
                 if path == None:
                     print("\nTools\n===============")
                     print ("Tools NotFound")
@@ -208,7 +208,7 @@ def termux_console():
                     
                 except:
                     print ("Part Not Found")
-            elif option2[0] == 'list':
+            elif option2 == 'list':
                 if path == None:
                     print("\nTools\n===============")
                     print ("Tools NotFound")
