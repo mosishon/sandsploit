@@ -78,7 +78,7 @@ def print_usage():
 def termux():
   
     lpath = "/data/data/com.termux/files/usr/opt/"
-     = os.path.isdir(lpath)
+    ex = os.path.isdir(lpath)
     if ex == False:
         os.mkdir("/data/data/com.termux/files/usr/opt/")
   
