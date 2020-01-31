@@ -17,6 +17,9 @@ from datetime import datetime
 
 ##################################################
 
+def controlc_signal(signal,frame):
+    print ("\nInterrupt: use the 'exit' command to quit")
+
 
 
 #Console Function
