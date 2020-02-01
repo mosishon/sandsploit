@@ -10,7 +10,7 @@ def banner():
     ▒██    ▒                        Sandsploit Framework  
     ░ ▓██▄   
     ▒   ██▒       Developers:  Aμιρ (AMJ)   &    Invisible rabbit(Mahdis)
-    ▒██████▒▒      
+    ▒██████▒▒                           ByteSecurity
     ▒ ▒▓▒ ▒ ░                         Version : 2.6
     ░ ░▒  ░ ░                               No System Safe 
     ░  ░  ░  --------------------------------------------------------------------------------------
@@ -26,6 +26,7 @@ def banner():
     \033[91m    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝   ╚═╝   
                       Sandsploit Framework
                         Version 2.6
+                        ByteSecurity
         Developers:  Aμιρ (AMJ)  &  Invisible rabbit(Mahdis)               
                                 No System Safe
     --------------------------------------------------------------------------------------
