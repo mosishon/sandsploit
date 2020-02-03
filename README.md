@@ -10,43 +10,10 @@ This is a Good Tool For Pentesters
 
 you can use this Framework in all *nix os such as GNU & BSD
 ## PreView
-<pre>
-[SSF@AMJ](sandsploit){None} → banner
+<p align="center">
+  <img src="docs/PreView.gif" alt="Master">
+</p>
 
- 
-    ██████  
-    ▒██    ▒                        Sandsploit Framework  
-    ░ ▓██▄   
-    ▒   ██▒       Developers:  Aμιρ (AMJ)   &    Invisible rabbit(Mahdis)
-    ▒██████▒▒      
-    ▒ ▒▓▒ ▒ ░                         Version : 2.6
-    ░ ░▒  ░ ░                               No System Safe 
-    ░  ░  ░  --------------------------------------------------------------------------------------
-        ░  
-    
-[SSF@AMJ](sandsploit){None} →  help
-
-
-Command     Description
-========    ============
-banner      Change Banner
-bash        Run Bash Shell
-listener    Sniffing Port
-python      Interactive Shell(Debuging Purposes)
-RSMaker     Make Reverse Shell For Desktop Operating Systems
-run         Run Exploits & Scripts
-use         Interact with one of the two sections of Tools or Exploits
-version     Show version of SandSploit
-upgrade     Full Upgrade Freamworks
-update      Update Exploits & Scripts Parts
-exit        Exit From SSF
-                
-[SSF@AMJ](sandsploit){None} → 
-
-</pre>
-Screenshot
---
-![](docs/ScreenShot.png)
 Installing
 --
 
