@@ -31,7 +31,7 @@ def upgrade():
                                         return None
 
 
-                                os.system("git clone https://github.com/auip-0x0/sandsploit.git")
+                                os.system("git clone https://github.com/ByteSecurity/sandsploit.git")
                                 src = "sandsploit/project/"
                                 dst = "/opt/sandsploit/"
                                 copytree(src, dst)
