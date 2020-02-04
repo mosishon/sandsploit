@@ -42,3 +42,9 @@ Gmail-Cracker.py
 </pre>
 You will also be shown a list of commands by entering the "help" command
 
+Usable Sections
+--
+```
+InformationGathering
+Cracking
+```
