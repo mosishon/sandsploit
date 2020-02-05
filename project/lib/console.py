@@ -212,7 +212,7 @@ def termux_console():
             
             elif option2[0] == 'use':
                 try:
-                    check = "/opt/sandsploit/module/%s/"%option2[1]
+                    check = "/data/data/com.termux/files/usr/opt/sandsploit/module/%s/"%option2[1]
                     exist = os.path.isdir(check) 
                     if exist:
                         path = check
@@ -244,16 +244,10 @@ RSMaker     Make Reverse Shell For Desktop Operating Systems
 run         Run Tools In modules
 use         Interact With Different Parts of Penetration Testing Tools
 version     Show version of SandSploit
-upgrade     Full Upgrade Freamworks
-update      Update Exploits & Scripts Parts
 exit        Exit From SSF
                 ''')
             elif option == "version":
                 version()
-            elif option == "update":
-                update()
-            elif option == "upgrade":
-                upgrade()
             elif option == "banner":
                 banner()
             elif option == "RSMaker":
