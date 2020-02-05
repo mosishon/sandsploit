@@ -3,3 +3,4 @@ tqdm
 bs4
 builtwith
 colorama
+distro
