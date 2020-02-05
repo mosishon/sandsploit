@@ -11,7 +11,7 @@ def banner():
     ░ ▓██▄   
     ▒   ██▒       Developers:  Aμιρ (AMJ)   &    Invisible rabbit(Mahdis)
     ▒██████▒▒                           ByteSecurity
-    ▒ ▒▓▒ ▒ ░                         Version : 2.6
+    ▒ ▒▓▒ ▒ ░                         Version : 2.7
     ░ ░▒  ░ ░                               No System Safe 
     ░  ░  ░  --------------------------------------------------------------------------------------
         ░  
@@ -25,7 +25,7 @@ def banner():
     \033[91m    ███████║██║  ██║██║ ╚████║██████╔╝███████║██║     ███████╗╚██████╔╝██║   ██║   
     \033[91m    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝   ╚═╝   
                       Sandsploit Framework
-                        Version 2.6
+                        Version 2.7
                         ByteSecurity
         Developers:  Aμιρ (AMJ)  &  Invisible rabbit(Mahdis)               
                                 No System Safe
