@@ -10,13 +10,15 @@ def listener():
     queue = Queue()
     all_connections = []
     all_address = []
+    def controlc_signal(signal,frame):
+        quit_gracefully(signal=None, frame=None)
     def register_signal_handler():
         signal.signal(signal.SIGINT, quit_gracefully)
         signal.signal(signal.SIGTERM, quit_gracefully)
         return
 
     def quit_gracefully(signal=None, frame=None):
-        print('\nQuitting gracefully')
+        #print('\nQuitting gracefully')
         for conn in all_connections:
             try:
                 conn.shutdown(2)
@@ -28,13 +30,19 @@ def listener():
         s.close()
         sys.exit(0)
     # Create a Socket ( connect two computers)
+    signal.signal(signal.SIGINT,controlc_signal)
     def create_socket():
         try:
             global host
             global port
             global s
             host = ""
-            port = int(input("Port >> "))
+            try:
+                port = int(input("Port >> "))
+            except:
+                print ("Wrong !!! ")
+                print ("quitting....")
+                quit_gracefully(signal=None, frame=None)
             s = socket.socket()
 
         except socket.error as msg:
@@ -51,7 +59,7 @@ def listener():
             try:
                 s.bind((host, port))
             except:
-                print ("Port : %s already in use")
+                print ("Port : %s already in use"%port)
                 return 1
             s.listen(5)
 
@@ -81,7 +89,7 @@ def listener():
                 print("Connection has been established :" + address[0])
 
             except:
-                print("Error accepting connections")
+                #print("Error accepting connections")
                 break
 
 
@@ -193,8 +201,7 @@ select   select Target such as > select 0
                 break
             if x == 2:
                 start_turtle()
-                quit_gracefully(signal=None, frame=None)
-            queue.task_done()
+                queue.task_done()
 
 
     def create_jobs():
