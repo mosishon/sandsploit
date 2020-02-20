@@ -137,7 +137,6 @@ exit        Exit From SSF
                 RSMaker()
             elif option == "listener":
                 listener()
-                console()
             elif option == "exit":
                 sys.exit()
             else:
@@ -254,7 +253,6 @@ exit        Exit From SSF
                 RSMaker()
             elif option == "listener":
                 listener()
-                console()
             elif option == "exit":
                 sys.exit()
             else:
