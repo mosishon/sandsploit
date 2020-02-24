@@ -6,7 +6,7 @@ HOST = None
 PAYFILE = None
 
 name = "XSS Scanner"
-author = "Invisible Rabbit (Mahdis)"
+author = "Invisible Rabbit(Mahdis)"
 info = "Scan Xss Vulnerability in the Website"
 
 
