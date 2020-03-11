@@ -41,7 +41,6 @@ def console():
         while True:
             signal.signal(signal.SIGINT,controlc_signal)
             #Get PWD
-            signal.signal(signal.SIGINT,controlc_signal)
             getcwd = os.getcwd()
             getdir = getcwd.split("/")
             pwd =  getdir[-1]
