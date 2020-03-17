@@ -27,8 +27,17 @@ def upgrade():
 					
                                 exist = os.path.isdir('sandsploit') 
                                 if exist :
-                                        print ("sandsploit Directory is Exist! Please Remove This & Try Again .... ")
-                                        return None
+					choice = input("Sandsploit Directory Is Already Exist! Do You Want Remove This?(n/Y)").lower()
+					if choice in ("", "\n","y"):
+						try:
+							shutil.rmtree("sandsploit")
+							pass
+						except:
+							print("We could not delete the sandsploit folder! Please Do It And Try Again!")
+							pass
+					else:
+						print("Ok! Please Remove Sandsploit Directory And Try Again!!")
+                                        	return None
 
 
                                 os.system("git clone https://github.com/ByteSecurity/sandsploit.git")
